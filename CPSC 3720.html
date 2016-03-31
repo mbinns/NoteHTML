@@ -951,8 +951,405 @@ Main program module
 <span id="Exam 3 Material-Components of resolve-Figuring out what an operation does-OR"></span><strong id="OR">OR</strong> an intantiated concept
 
 </ul>
-<li>
+</ul>
 
+<div id="Exam 3 Material-Lecture 3&#47;31&#47;2016"><h2 id="Lecture 3&#47;31&#47;2016">Lecture 3/31/2016</h2></div>
+<div id="Exam 3 Material-Lecture 3&#47;31&#47;2016-String"><h3 id="String">String</h3></div>
+<ul>
+<li>
+Ptr_Btwn(start,end,str)
+
+<li>
+DeString(str):
+
+<ul>
+<li>
+Returns the left most value in str
+
+<li>
+Requires |str| = 1
+<pre>
+    Operation Top(replaces R: Entry; restores S: Stack);
+        requires |S| /=0
+        ensures DeString(Prt_Btwn(1,2,n))
+</pre>
+
+</ul>
+</ul>
+    
+<div id="Exam 3 Material-Lecture 3&#47;31&#47;2016-Quality Assurance"><h3 id="Quality Assurance">Quality Assurance</h3></div>
+<ul>
+<li>
+Can refer to:
+
+<ul>
+<li>
+A set of activities designed to ensure software quality
+
+<li>
+A department in a software development orgs
+
+</ul>
+<li>
+Validation:
+
+<ul>
+<li>
+Are we building the right product
+
+<li>
+Focused on customer reqs
+
+<li>
+Collaborative activity: Customer is involved
+
+<li>
+Activity: Testing
+
+</ul>
+<li>
+Verification:
+
+<ul>
+<li>
+Does code meet spec
+
+<li>
+Internal activity: Dev/QA only
+
+</ul>
+</ul>
+
+<div id="Exam 3 Material-Lecture 3&#47;31&#47;2016-Verification"><h3 id="Verification">Verification</h3></div>
+<ul>
+<li>
+Three activities typically used:
+
+<ul>
+<li>
+Testing:
+
+<ul>
+<li>
+Execute program to check for bugs
+
+<li>
+Finds about 60-70% of the bugs in the code, it is impossible to find all of the bugs
+
+</ul>
+<li>
+Tracing:
+
+<ul>
+<li>
+Review source code to check for bugs
+
+<li>
+More eyeballs to check for more bugs
+
+</ul>
+<li>
+Formal Verification:
+
+<ul>
+<li>
+Prove source code correctly implements its spec
+
+<li>
+Most comprehensive checking and will find all of the bugs in the code, if the proof is correct
+
+</ul>
+</ul>
+<li>
+Combo of Testing and Tracing is the best way to find most bugs
+
+</ul>
+
+<div id="Exam 3 Material-Lecture 3&#47;31&#47;2016-The Role of Quality Assurance"><h3 id="The Role of Quality Assurance">The Role of Quality Assurance</h3></div>
+<ul>
+<li>
+An independent division in a development org
+
+<li>
+QA representatives paticipate in development process from start to finish
+
+<li>
+Effecting bug squashing involves collaborative processes between dev and QA
+
+</ul>
+
+<div id="Exam 3 Material-Lecture 3&#47;31&#47;2016-Testing"><h3 id="Testing">Testing</h3></div>
+<ul>
+<li>
+Addresses the ultimate question: "Does it work?"
+
+<li>
+Mindsets:
+
+<ul>
+<li>
+Test to show that the program meets reqs:
+
+<ul>
+<li>
+This is wrong because there is not a program that does not have bugs
+
+</ul>
+<li>
+Test to find bugs:
+
+<ul>
+<li>
+This is the correct mindset when going into testing
+
+</ul>
+</ul>
+<li>
+A successful test is a test that uncovers a bug 
+
+</ul>
+
+<div id="Exam 3 Material-Lecture 3&#47;31&#47;2016-White Box v. Black Box"><h3 id="White Box v. Black Box">White Box v. Black Box</h3></div>
+<ul>
+<li>
+White box:
+
+<ul>
+<li>
+Internal perspective
+
+<li>
+Select input based on knowledge of implementation details
+
+<li>
+Debugger
+
+<li>
+Advantages:
+
+<ul>
+<li>
+Finds more bugs becuase you can design input that takes into account the design of the code
+
+<li>
+Finds the bugs that does not find the correct answer using the correct way, even if it find the right answer
+
+<li>
+More comprehensive
+
+<li>
+Can be done sooner
+
+</ul>
+<li>
+Disadvantage:
+
+<ul>
+<li>
+Must be done after the fact/can not be off loaded
+
+<li>
+More expensive
+
+</ul>
+</ul>
+<li>
+Black box:
+
+<ul>
+<li>
+External perspective
+
+<li>
+Does not use knowledge of implementation details
+
+<li>
+Feed in input observe output
+
+<li>
+Advantage:
+
+<ul>
+<li>
+Testing can be created in parrallel with the dev of the program if they have been included in the initial spec sheet convo
+
+<li>
+More through because they have a testing mindset
+
+</ul>
+<li>
+Disadvantage:
+
+<ul>
+<li>
+Cannot find the bugs were the output is correct but the method was wrong
+
+</ul>
+</ul>
+<li>
+Devs can do both black and white box
+
+<li>
+QA just does Black box
+
+</ul>
+
+<div id="Exam 3 Material-Lecture 3&#47;31&#47;2016-Testing Scopes"><h3 id="Testing Scopes">Testing Scopes</h3></div>
+<ul>
+<li>
+Unit testing:
+
+<ul>
+<li>
+isolates the component and feeds it input to make sure it performs correctly
+
+</ul>
+<li>
+Integration testing:
+
+<ul>
+<li>
+integrates the component into the system to make sure it performs correctly in a full environment
+
+<li>
+Testing parts of the whole system in a combined component environ
+
+<li>
+Can be automated
+
+</ul>
+<li>
+Validation testing:
+
+<ul>
+<li>
+Does it have the right features
+
+<li>
+Does it meet the specs
+
+<li>
+Running the whole system
+
+<li>
+More comprehensive that intergration testing
+
+<li>
+Never automated
+
+</ul>
+<li>
+Regression test:
+
+<ul>
+<li>
+Checks whether code modifications introduced bugs that were not present in the previous build
+
+<li>
+Done be QA
+
+</ul>
+</ul>
+
+<div id="Exam 3 Material-Lecture 3&#47;31&#47;2016-Testing Techniques"><h3 id="Testing Techniques">Testing Techniques</h3></div>
+<ul>
+<li>
+Agile QA Testing
+
+<li>
+Test driven dev:
+
+<ul>
+<li>
+Kkey agile dev technique
+
+<li>
+Write unit test before implementing functionality
+
+<li>
+Process (In Order):
+
+<ul>
+<li>
+Write spec for new method to be implemented
+
+<li>
+Create stub method (Empty)
+
+<li>
+Create unit test for method
+
+<li>
+Run test (obsureve failures)
+
+<li>
+Implement method
+
+<li>
+Run unit test
+
+<li>
+Degub if fails
+
+</ul>
+<li>
+Advantages:
+
+<ul>
+<li>
+Helps write the spec for the method percisely
+
+<li>
+Looks at the corner cases first
+
+<li>
+Gives you away to step through your code as soon as you have written it
+
+<li>
+Find more bugs
+
+<li>
+Psychologically motivating
+
+</ul>
+</ul>
+</ul>
+
+<div id="Exam 3 Material-Lecture 3&#47;31&#47;2016-Test Case Design"><h3 id="Test Case Design">Test Case Design</h3></div>
+<ul>
+<li>
+Consits of two things:
+
+<ul>
+<li>
+Input data
+
+<li>
+Expected results
+
+</ul>
+<li>
+Smallest number of cases that have the highest probablity of crashing the program
+
+<li>
+Approaches:
+
+<ul>
+<li>
+Specification based approach: (Black Box)
+
+<ul>
+<li>
+Design test inputs that conform to precondition
+
+<li>
+Compute expected results
+
+</ul>
+<li>
+Implementation based approach: (White Box)
+
+</ul>
 </ul>
 
 </body>
