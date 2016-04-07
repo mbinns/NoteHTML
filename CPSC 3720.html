@@ -1513,5 +1513,130 @@ end Do_Nothing;
 
 </pre>
 
+<div id="Exam 3 Material-Lecture 4&#47;07&#47;16"><h2 id="Lecture 4&#47;07&#47;16">Lecture 4/07/16</h2></div>
+<div id="Exam 3 Material-Lecture 4&#47;07&#47;16-Proving loop correctness"><h3 id="Proving loop correctness">Proving loop correctness</h3></div>
+<ul>
+<li>
+Proving termination:
+
+<ul>
+<li>
+In RESOVE add a decreasing clause to while loops:
+
+<li>
+The decreasing clause must use formal math operations not resolve operation calls
+
+<li>
+The loop does not have to terminate exactly 0
+<pre>
+Var i: Integer
+While (i&gt;0)
+    decreasing i;
+do
+    i := i - 1;
+end;
+</pre>
+
+<li>
+You have to find a value that decreases or increases into a fixed bound
+
+</ul>
+</ul>
+
+<div id="Exam 3 Material-Lecture 4&#47;07&#47;16-Loop Invariant"><h3 id="Loop Invariant">Loop Invariant</h3></div>
+<ul>
+<li>
+Boolean expression that is true at three different points:
+
+<ul>
+<li>
+True just before the loop is entered
+
+<li>
+True at the beginnig and end of every single loop itteration
+
+<li>
+Even if you never enter the loop
+
+</ul>
+<li>
+A number of different invariants can be written for any loop
+<pre>
+Operation Clear (clears S: Stack);
+Procedure
+    Var D, Item: Integer;
+    D:= Depth(S);
+    While (D &gt; 0)
+        maintaining D = |S|;
+        decreasing D;
+    do
+        Pop(Item, S);
+        D := Depth(S);
+    end;
+end Clear;
+</pre>
+
+<li>
+Options for the aboe code:
+
+<ul>
+<li>
+|S|&gt;=0
+
+<li>
+D&gt;=0
+
+<li>
+true
+
+</ul>
+<li>
+A useful loop invariant:
+
+<ul>
+<li>
+Expresses the work done by the loop
+
+<li>
+Helps to prove the procedure correct
+
+</ul>
+<li>
+Stratagey:
+
+<ul>
+<li>
+Look at the ensures clause to find what needs to be proven true in the operation, IE work from the post conditions
+
+<li>
+Trace the algorithm and look for patterns
+<pre>
+[Values of variables after operations preformed]
+Example for finding invariants using tracing:
+
+
+#S=&lt;1,2,3&gt;
+#T=&lt;4,5&gt;
+Operation Flip_onto(clears S: Stack; updates T: Stack);
+    ensures T = Reverse(#S) o #T;
+Procedure
+    Var Next_Entry: Char_Str;
+    Var D: Integer;
+     
+    D:=Depth(S); D = 3
+    While(D/=0)
+        maintaining [|#S|+|#T|=|SoT|]
+        decreasing |S|;
+    do
+        Pop(Next_Entry, S); [Next_Entry = 1 | Next_Entry = 2]
+        Push(Next_Entry, T); [Next_Entry /= 1 | Next_Entry /= 2] (Because Push is destructive)
+        D:=Depths(S); [D = 2 | D = 1]
+    end;
+end Flip_onto; 
+
+</ul>
+</ul>
+</pre>
+
 </body>
 </html>
