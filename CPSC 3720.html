@@ -1625,7 +1625,7 @@ Procedure
      
     D:=Depth(S); D = 3
     While(D/=0)
-        maintaining [|#S|+|#T|=|SoT|]
+        maintaining [{|#S|+|#T|=|SoT|} | Reverse(S) o #T]
         decreasing |S|;
     do
         Pop(Next_Entry, S); [Next_Entry = 1 | Next_Entry = 2]
@@ -1633,10 +1633,10 @@ Procedure
         D:=Depths(S); [D = 2 | D = 1]
     end;
 end Flip_onto; 
+</pre>
 
 </ul>
 </ul>
-</pre>
 
 </body>
 </html>
