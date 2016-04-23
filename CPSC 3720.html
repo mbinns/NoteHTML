@@ -1638,5 +1638,275 @@ end Flip_onto;
 </ul>
 </ul>
 
+<div id="Exam 3 Material-Lecture 04&#47;12&#47;16"><h2 id="Lecture 04&#47;12&#47;16">Lecture 04/12/16</h2></div>
+<div id="Exam 3 Material-Lecture 04&#47;12&#47;16-Inductive Proofs"><h3 id="Inductive Proofs">Inductive Proofs</h3></div>
+<ul>
+<li>
+Prove that the initial step is true, (base case)
+
+<li>
+Then add a step also proving that that one is true (inductive hypothesis)
+
+</ul>
+
+<div id="Exam 3 Material-Lecture 04&#47;12&#47;16-Inductive process and invariants"><h3 id="Inductive process and invariants">Inductive process and invariants</h3></div>
+<ul>
+<li>
+Inductive proofs apply to invarients in loops
+
+<li>
+Prove the invariant using inductions:
+
+<ul>
+<li>
+Basis Step:
+
+<ul>
+<li>
+Show invariant is true before code execution
+
+</ul>
+<li>
+Apply the inductive hypothesis:
+
+<ul>
+<li>
+Assume that it is true at step n and prove step n+1
+
+</ul>
+<li>
+In addition to taking the invariant you should take the condition in the loop and plug it in as a fact as well to prove things
+
+</ul>
+</ul>
+
+<div id="Exam 3 Material-Lecture 04&#47;12&#47;16-Project 3 Notes"><h3 id="Project 3 Notes">Project 3 Notes</h3></div>
+<ul>
+<li>
+Read up to:
+
+<ul>
+<li>
+Preconditions:
+
+<ul>
+<li>
+This method should replace contents up in the queue with contentes read infrom the keyboard
+
+<li>
+Senarios:
+
+<ul>
+<li>
+Initially empty
+
+<li>
+Junk in the queue
+
+</ul>
+</ul>
+</ul>
+<li>
+When writing invariants:
+
+<ul>
+<li>
+X-Y (system might not be happy)
+
+<li>
+X+(-y) (System would like this)
+
+</ul>
+<li>
+' refers to P and Q at various states
+
+<li>
+P Q with out tic marks are initial state
+
+</ul>
+
+<div id="Exam 3 Material-Lecture 4&#47;21&#47;16"><h2 id="Lecture 4&#47;21&#47;16">Lecture 4/21/16</h2></div>
+<div id="Exam 3 Material-Lecture 4&#47;21&#47;16-Testing With Equivalence Classes"><h3 id="Testing With Equivalence Classes">Testing With Equivalence Classes</h3></div>
+<ul>
+<li>
+A set of elements which share something in common
+
+<li>
+Example:
+
+<ul>
+<li>
+Most input is restricted in some way
+
+<li>
+This, two equivalence classes for each input value:
+
+<ul>
+<li>
+Legal input
+
+<li>
+Illegal input
+
+</ul>
+</ul>
+</ul>
+<div id="Exam 3 Material-Lecture 4&#47;21&#47;16-Case Study"><h3 id="Case Study">Case Study</h3></div>
+<ul>
+<li>
+A screen requires input of a single numeric value
+
+<li>
+The legal range is 0-100
+
+<li>
+What are the equivalence classes
+
+<li>
+How many test cases are needed
+
+</ul>
+
+<div id="Exam 3 Material-Lecture 4&#47;21&#47;16-Equivalence Classes Cont."><h3 id="Equivalence Classes Cont.">Equivalence Classes Cont.</h3></div>
+<ul>
+<li>
+Fence post errors are common
+
+<li>
+Not all legal/illegal inputs are fully equivalent
+
+<li>
+Consider these equivalence classes:
+
+<ul>
+<li>
+Well within range
+
+<li>
+Well out of range
+
+<li>
+Just within range
+
+<li>
+Just out of range
+
+</ul>
+</ul>
+
+<div id="Exam 3 Material-Lecture 4&#47;21&#47;16-Illegal Inputs and Preconditions"><h3 id="Illegal Inputs and Preconditions">Illegal Inputs and Preconditions</h3></div>
+<ul>
+<li>
+Two types:
+
+<ul>
+<li>
+External sources, IE from a user
+
+<li>
+Internal sources, IE from the software
+
+</ul>
+<li>
+Program specs should define how to handle invalid external input
+
+<li>
+What about invalid internal parameter values:
+
+<ul>
+<li>
+Remember, preconditions typically specify valid parameter values
+
+</ul>
+<li>
+When you are implementing a method and you do not put any checks in the method to verify that your preconditions are satisfied then you are going to have bugs, not nessacerly in the method running amok but the methods feeding into it.
+
+</ul>
+
+<div id="Exam 3 Material-Lecture 4&#47;21&#47;16-Defensive Programming"><h3 id="Defensive Programming">Defensive Programming</h3></div>
+<ul>
+<li>
+UI Layer is responsible for validating all inputs and ensuring that preconditions are met for all methods it calls
+
+<li>
+Applcation logic layer can assume that preconditions are met:
+
+<ul>
+<li>
+Not always safe to assume though
+
+<li>
+Although you should not dupilicate checks from the UI because you may also duplicate the bug from the check
+
+</ul>
+<li>
+Checks should always happen in the UI not in the bussiness layer/model
+
+<li>
+Assertions and preconditions will help ensure that input is correct
+
+<li>
+UI cafefully validates user input to ensure that preconditions for other applcation logic are met
+
+</ul>
+
+<div id="Exam 3 Material-Test Review"><h2 id="Test Review">Test Review</h2></div>
+<ul>
+<li>
+41 questions
+
+<li>
+Final is 9:30 Thursday morning
+
+<li>
+First 10 questions: (40%)
+
+<ul>
+<li>
+Will be on formal specifications in resolve
+
+<li>
+Give us operations:
+
+<ul>
+<li>
+Tracing code
+
+<li>
+Understanding pre and post conditions
+
+<li>
+Parameter passing modes
+
+<li>
+Verification condition and some givens and you will be asked to if it is provable based on givens
+
+<li>
+Fill out part of a proof table with facts and obligations
+
+</ul>
+</ul>
+<li>
+T/F on quality assurance and testing
+
+<li>
+T/F copyright and patent
+
+<li>
+~6 questions on:
+
+<ul>
+<li>
+Unified process
+
+<li>
+Itterative process
+
+<li>
+First exam style questions
+
+</ul>
+</ul>
+
 </body>
 </html>
