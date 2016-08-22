@@ -70,7 +70,7 @@ Friday Programming activities/quizzes/exams
 
 </ul>
 
-<div id="CPSC 3600-8&#47;18&#47;16"><h2 id="8&#47;18&#47;16">8/18/16</h2></div>
+<div id="CPSC 3600-8&#47;19&#47;16"><h2 id="8&#47;19&#47;16">8/19/16</h2></div>
 <ul>
 <li>
 Group 15:
@@ -316,6 +316,163 @@ TCP/IP is the current protocol for comm
 
 </ul>
 </ul>
+</ul>
+
+<div id="CPSC 3600-8&#47;22&#47;16"><h2 id="8&#47;22&#47;16">8/22/16</h2></div>
+<ul>
+<li>
+Protocol Hierarchy:
+
+<ul>
+<li>
+To reduce design complecity, most networks are orgainized in layers
+
+<li>
+Layers may be implemented in software or hardware depending on function
+
+<li>
+Layers can communicate with layers on other machines on the network using an agreed upon protocol
+
+<li>
+Layers trickle down from the higher to lower numbers then back up on the reciving machine
+
+</ul>
+<li>
+Protocol:
+
+<ul>
+<li>
+An agreement between layers on how the communication is to proceede
+
+<li>
+The steps that need to take place on how the computer will communicate
+
+<li>
+Similar to speaking the same language as someone
+
+</ul>
+<li>
+Layers:
+
+<ul>
+<li>
+Lower layers specify how the bits are sent
+
+<li>
+Higher levels (Application level) contain information an application can use
+
+<li>
+Protocols on a per layer basis allow for different configurations to communicate with one anaother
+
+<li>
+No data is transferred from layer n on any two machines data and control is passed to the layer below
+
+<li>
+Protocol information is appended as a header on the packet
+
+<li>
+After layer 1 the phyisical medium where the actual communication occurs
+
+</ul>
+<li>
+Information flow in a network:
+
+<ul>
+<li>
+After every layer the next layers header is appended on the front
+<pre>
+    LNH = Layer number header (Appended at each descending layer)
+    Layer 5 [Message]
+    Layer 4 [L4H][Message]
+    Layer 3 [L3H][L4H][Message]
+    Layer 2 [L2H][L3H][L4H][Message]
+    Layer 1 [L1H][L2H][L3H][L4H][Message]
+    Physical medium
+</pre>
+
+</ul>
+</ul>
+
+<ul>
+<li>
+Design issues for layers:
+
+<ul>
+<li>
+Robustness:
+
+<ul>
+<li>
+Error detection: Retransimission is needed when information is received incorrectly
+
+<li>
+Error correction: Message is recovered from incorrect bits
+
+<li>
+Routing: Automatically fin an alternative route from source to desitination
+
+</ul>
+<li>
+Scalability:
+
+<ul>
+<li>
+Protocol layering: divides the overall problem and hides implementation details
+
+<li>
+Addressing: Naming and identifying senders and receivers
+
+</ul>
+<li>
+Resource allocation:
+
+<ul>
+<li>
+Statisitcal multiplexing: allocating bandwidth dynamically according to the short term needs of hosts
+
+<li>
+Flow control: feedback from the receiver to the sender is used to overcome the fast sender slow receiver problem:
+
+<ul>
+<li>
+If the sender is on fiber and the receiver is on DSL the sender can send many more packets than the receiver can get
+
+<li>
+So the ACK packet is inplace to let the sender know what packets the receiver has gotten
+
+</ul>
+<li>
+Congestion: Too many computer on a network at one time
+
+<li>
+Real-time: Timeliness
+
+<li>
+Quality of service: High throughput, low latency:
+
+<ul>
+<li>
+Can send lots of data very quickly
+
+</ul>
+</ul>
+<li>
+Security:
+
+<ul>
+<li>
+Confidentiality: Prevents eavesdropping
+
+<li>
+Authentication: Prevents someone from impersonating someone else
+
+<li>
+Integrety: Make sure the data does not change from point 'A' to point 'B'
+
+</ul>
+</ul>
+<li>
+
 </ul>
 
 </body>
