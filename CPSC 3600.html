@@ -472,7 +472,134 @@ Integrety: Make sure the data does not change from point 'A' to point 'B'
 </ul>
 </ul>
 <li>
+Network layer services:
 
+<ul>
+<li>
+Connection orienteed service:
+
+<ul>
+<li>
+The data is expected to be recived in the order it was sent
+
+<li>
+TCP
+
+</ul>
+<li>
+Connetionless service:
+
+<ul>
+<li>
+The messages are self contained and are routed independent in the order they were sent
+
+<li>
+Therefore messages can be recived out of order
+<pre>
+First 3 are connection oriented
+The rest are connectionless
+
+| Services                | Example              |
+|-------------------------|----------------------|
+| Reliable message stream | Sequence of pages    |
+| Reliable byte stream    | Movie download       |
+| Unreliable connection   | VOIP                 |
+| Unreliable datagram     | Electronic junk mail |
+| Acknoledged datagram    | Text messaging       |
+| Request reply           | Database query       |
+</pre>
+
+</ul>
+</ul>
+<li>
+OSI 7 lay network model:
+
+<ul>
+<li>
+<a href="https:&#47;&#47;en.wikipedia.org&#47;wiki&#47;OSI_mode:&#47;&#47;en.wikipedia.org&#47;wiki&#47;OSI_model">https://en.wikipedia.org/wiki/OSI_mode://en.wikipedia.org/wiki/OSI_model</a>
+
+<li>
+This is the first step to an international standard of network communication 
+
+<li>
+Physical layer:
+
+<ul>
+<li>
+This layer is concered with tranmission of bits
+
+<li>
+Some issues handeled are:
+
+<ul>
+<li>
+How many volts for 0 and how many volts for 1
+
+<li>
+number of bits persecond
+
+<li>
+Whether it is a one-way or two-way communication
+
+</ul>
+<li>
+Serial ports are a good example of this
+
+</ul>
+<li>
+Data link layer:
+
+<ul>
+<li>
+This layer groups bits into frames (Packets) and ensures correct delivery free of errors
+
+<li>
+It adds some bits at the beginning and end of each frame to be used as a check sum:
+
+<ul>
+<li>
+The receiver makes sure the checksum is correct and if it is not correct will request a retransmmission
+
+</ul>
+<li>
+This layer has two sublayers:
+
+<ul>
+<li>
+Logical link contol:
+
+<ul>
+<li>
+LLC defines how data is transferred over network medium and connects to higher layers
+
+</ul>
+<li>
+Medium access control:
+
+<ul>
+<li>
+MAC defines who can use the network medium when multiple computers are trying to access it
+
+</ul>
+<li>
+Token passing - Kinda like holding the speaking stick, whoever holds the token can transmit data
+
+<li>
+Carrier sense multiple access with collision avidance (CSMA/CD) for ethernet:
+<pre>
+
+
+    B           D
+                    
+A       C           E
+
+If both A and C send something to B then there will be a collision and only one can send at a time
+But if C sends to D and A sends to B then they can both send at the same time
+</pre>
+
+</ul>
+</ul>
+</ul>
 </ul>
 
 </body>
