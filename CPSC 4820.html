@@ -21,8 +21,312 @@ If oyu find a driver or create something distrobute it
 Site plagerism
 
 </ul>
-<li>
+</ul>
 
+<div id="CPSC 4820-8&#47;18&#47;16"><h2 id="8&#47;18&#47;16">8/18/16</h2></div>
+<ul>
+<li>
+What is an embedded system?
+
+<ul>
+<li>
+There can be multiple definitions
+
+<li>
+A non-traditional computer with constraints:
+
+<ul>
+<li>
+Power
+
+<li>
+Mobile
+
+<li>
+Memory
+
+<li>
+Specialized purpose 
+
+</ul>
+</ul>
+<li>
+What does an emebeded computer have in it:
+
+<ul>
+<li>
+Sensors:
+
+<ul>
+<li>
+GPS
+
+<li>
+Temp
+
+<li>
+Light
+
+<li>
+Humiditiy
+
+</ul>
+<li>
+Power:
+
+<ul>
+<li>
+Batteries
+
+<li>
+Solar Panel
+
+<li>
+Some way to get energy
+
+</ul>
+<li>
+Processing Core:
+
+<ul>
+<li>
+MCU
+
+<ul>
+<li>
+Typically have the memory on chip rather than using a system bus like normal cpu's
+
+<li>
+Have a lot baked in
+
+</ul>
+<li>
+Additionall memory
+
+<li>
+IO:
+
+<ul>
+<li>
+ADC - Analog to digital converter
+
+<li>
+DAC - Digital to analog converter
+
+<li>
+Digital bus: (Different parts use different communication)
+
+<ul>
+<li>
+UART
+
+<li>
+SPI
+
+<li>
+I2C
+
+</ul>
+</ul>
+</ul>
+<li>
+UI (User Interface):
+
+<ul>
+<li>
+Could be buttons and lights
+
+<li>
+Vibration and tactile feedback
+
+</ul>
+<li>
+Communication:
+
+<ul>
+<li>
+Radios
+
+</ul>
+<li>
+Programming port
+
+<li>
+Actuator:
+
+<ul>
+<li>
+Allows it to something
+
+</ul>
+<li>
+Non-volitle storage:
+
+<ul>
+<li>
+Flash
+
+<li>
+FRAM
+
+</ul>
+<li>
+Protection:
+
+<ul>
+<li>
+Case
+
+</ul>
+</ul>
+</ul>
+
+<div id="CPSC 4820-8&#47;23&#47;16"><h2 id="8&#47;23&#47;16">8/23/16</h2></div>
+<ul>
+<li>
+Three basic principals:
+
+<ul>
+<li>
+Voltage:
+
+<ul>
+<li>
+Described as potential energy
+
+<li>
+Some kind of battery that has electric potential where current will flow from high to low
+
+<li>
+Volts
+
+</ul>
+<li>
+Current:
+
+<ul>
+<li>
+Flow of electricty from high to low
+
+<li>
+Amps
+
+<li>
+Electrons flow negative to positive, but we think of current as going positive to negative
+
+</ul>
+<li>
+Resitance:
+
+<ul>
+<li>
+Resists the flow of electricity
+
+<li>
+Ohms
+
+<li>
+Resitance decreases the amperage flowing through:
+
+<ul>
+<li>
+Ohms Law is the measurement of this
+
+</ul>
+</ul>
+</ul>
+<li>
+Ohms Law:
+
+<ul>
+<li>
+V=IR
+
+<li>
+Voltage=CurrentxResitance
+
+</ul>
+<li>
+Power:
+
+<ul>
+<li>
+P=IV
+
+<li>
+Power=CurrentxVoltage
+
+</ul>
+<li>
+Why does ohms law matter:
+
+<ul>
+<li>
+Because you need to know how long a battery is going to last
+
+<li>
+And because some components act as resisters
+
+<li>
+Diodes:
+
+<ul>
+<li>
+Restirct the flow of current in one direction
+
+<li>
+Typically have resisters in series to limit the current to the diaoded to stop it from blowing out
+
+</ul>
+</ul>
+<li>
+Voltage divider:
+
+<ul>
+<li>
+Anytime you have a voltage you want divided down you can use two resistors of the same resitance
+<pre>
+Voltage Divider:
+---------------------
+R2xVin
+------ = Vout
+R1+R2
+</pre>
+
+</ul>
+<li>
+Pull up and Pull down resistors:
+
+<ul>
+<li>
+These are good for defining default behaviors
+<pre>
+
+MCU|---------------|Sensor
+
+If both the sensor and MCU tries to send current at the same time a shortcuircut can happen
+If no one sends any current then the current can drift, meaning that it could sometimes be a 1 or sometimes be a 0
+    You want a baseline current through the wire
+
+Pull Up
+Both sides of the resistor are 5v
+           5V
+           Z
+MCU|---------------|Sensor
+The resistor in the middle between the MCU and the sensor will pull the drifitng voltage up to the source voltage
+The higher the resistance the slower the shift to the source voltage
+
+Pull Down
+Both sides of th resistor are 0
+MCU|---------------|Sensor
+           Z
+           Ground
+
+The same in place as the pull up but this pull the voltage down to zero over time
+You typically want the lowest resistence that gives you the behavior you want
+</pre>
+
+</ul>
 </ul>
 
 </body>
