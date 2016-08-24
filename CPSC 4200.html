@@ -37,6 +37,75 @@ TR 9 - 11AM
 Appointment
 
 </ul>
+<li>
+TA/Grader:
+
+<ul>
+<li>
+Nishant Vishwamitra nvishwa@clemson.edu
+
+</ul>
+</ul>
+<div id="CPSC 4200-8&#47;24&#47;16"><h2 id="8&#47;24&#47;16">8/24/16</h2></div>
+<ul>
+<li>
+The HB gary attack
+
+<ul>
+<li>
+Used SQL injection to gain access to the CMS server
+
+<li>
+Then they used a rainbow table to crack the password hashes:
+
+<ul>
+<li>
+A Rainbow table is similar to a hybrid dictionary attack in that it takes a word list and runs through all the words but then it starts changing letters in the word to common substitutions (I.E. a 0 for an o) this table is pregenerated to take some of the computational load off the system while cracking
+
+</ul>
+<li>
+After recovering a password they then used it to log into the webserver and used an escalation exploit to gain administrator access
+
+<li>
+The pivioted to the email server and used the emails to social engineer access to other machines
+
+</ul>
+<li>
+Lessons Learned from HBGary Hack:
+
+<ul>
+<li>
+Use off the shelf software
+
+<li>
+Patching!
+
+<li>
+Store passwords with stronger security
+
+<ul>
+<li>
+They used MD5 with no iterative hashing or salting
+
+</ul>
+<li>
+Force complex passwords
+
+<li>
+Don't reuse passwords
+
+<li>
+Delete sensitive e-mails
+
+<ul>
+<li>
+An email containing the root password for the rootkit.com site
+
+</ul>
+<li>
+Educate against social engineering
+
+</ul>
 </ul>
 
 </body>

@@ -512,7 +512,7 @@ The rest are connectionless
 </ul>
 </ul>
 <li>
-OSI 7 lay network model:
+OSI 7 layer network model:
 
 <ul>
 <li>
@@ -594,10 +594,388 @@ Carrier sense multiple access with collision avidance (CSMA/CD) for ethernet:
 A       C           E
 
 If both A and C send something to B then there will be a collision and only one can send at a time
-But if C sends to D and A sends to B then they can both send at the same time
+But if C sends to D and A sends to B then they can both send at the same time imagin drawing lines between the points and if theyy intersect then it would be a collision
 </pre>
 
 </ul>
+</ul>
+</ul>
+</ul>
+
+<div id="CPSC 3600-8&#47;24&#47;16"><h2 id="8&#47;24&#47;16">8/24/16</h2></div>
+<ul>
+<li>
+OSI 7 layer network model:
+
+<ul>
+<li>
+Network layer:
+
+<ul>
+<li>
+This layer is concerend with the transmission of packets and how they are routed from source to destination
+
+<li>
+Path finding algorithms are used here (Shortest path without conflicts):
+
+<ul>
+<li>
+If congestion is present on one host that is on the shortest path, the next best path  will be used
+
+</ul>
+<li>
+Congestion occurs when too many packets are present at the same time:
+
+<ul>
+<li>
+If many computers route through one host and the host cannot handle the load it is a bottleneck on the network
+
+</ul>
+<li>
+In broadcast networks routing is easy (It goes to everyone) so this layer is not very important:
+
+<ul>
+<li>
+Sometimes it doesn't even exist
+
+</ul>
+<li>
+In larger networks this layer is very complicated (The internet)
+
+</ul>
+<li>
+Transport layer:
+
+<ul>
+<li>
+Deals with lots of messages and must be reliable
+
+<li>
+Breaks messages into small packets of data and applies a sequence to them:
+
+<ul>
+<li>
+The syn/ack number in TCP threeway handshake
+
+</ul>
+<li>
+Examples are tranmission control protocol (TCP) and user datagram protocol (UDP):
+
+</ul>
+<li>
+Session layer:
+
+<ul>
+<li>
+Few applications use this layer, more enhanced verstion of transport
+
+<li>
+Use cases:
+
+<ul>
+<li>
+Dialog control:
+
+<ul>
+<li>
+Whos turn it is to send packets
+
+</ul>
+<li>
+Token management:
+
+<ul>
+<li>
+To keep track of identity
+
+</ul>
+<li>
+Synchronization:
+
+<ul>
+<li>
+Checkpoints for long transmissions
+
+</ul>
+</ul>
+<li>
+Many network implementations don't support this layer
+
+</ul>
+<li>
+Presentation layer:
+
+<ul>
+<li>
+Few applications use this layer
+
+<li>
+Use cases:
+
+<ul>
+<li>
+Syntax and sematincs of info transmitted
+
+</ul>
+<li>
+Allows machines with different represenations to communicate
+
+</ul>
+<li>
+Application layer:
+
+<ul>
+<li>
+This is a collection of protocols for high level applications
+
+<li>
+VOIP, web browsing, ssh
+
+<li>
+Protocols include:
+
+<ul>
+<li>
+HTTP/HTTPS/FTP/Telnet
+
+</ul>
+</ul>
+</ul>
+<li>
+Data transmission:
+
+<ul>
+<li>
+Sender works from the top down (With the highest level layer needed)
+
+<li>
+Reciver works from the bottom up (From the physical layer up)
+
+</ul>
+<li>
+TCP/IP reference model:
+
+<ul>
+<li>
+Used in the internet
+
+<li>
+Only 5 layers
+
+<ul>
+<li>
+Application 5:
+
+<ul>
+<li>
+Specifies format of the data that is usful for an application 
+
+</ul>
+<li>
+Transport 4:
+
+<ul>
+<li>
+Provides communication from an application on one computer to an app on another
+
+<li>
+Controlls max rate of data flow
+
+<li>
+Avoids congestion
+
+<li>
+Keeps order of packets
+
+<li>
+Main differences between OSI model and TCP:
+
+<ul>
+<li>
+They are typically the same in both model 
+
+</ul>
+</ul>
+<li>
+Internet 3:
+
+<ul>
+<li>
+Similar to the network layer in OSI
+
+<li>
+Communication between two computers across the internet, the internet addressing structure of the packets
+
+</ul>
+<li>
+Network interface 2:
+
+<ul>
+<li>
+This is the data link layer in OSI
+
+<li>
+MAC layer specifies details about comm over a singal network address and max packet size
+
+</ul>
+<li>
+Physical 1:
+
+<ul>
+<li>
+Same as the OSI model
+
+</ul>
+</ul>
+</ul>
+<li>
+Client server models:
+
+<ul>
+<li>
+Client and servers are not refering to the physical computer but the types of applications on them
+
+<ul>
+<li>
+Client:
+
+<ul>
+<li>
+Program initiates communication
+
+</ul>
+<li>
+Server:
+
+<ul>
+<li>
+Waits passivly for and then responds to messages
+
+</ul>
+</ul>
+<li>
+A computer can be both client and server at the same time
+
+<li>
+Example: You want to download a movie from a computer, you send a request (Making you the client) and the computer on the internet sends you a response in the form of a movie (The server) but you host a website on your computer (Making you the server) and someone wants to go to your site so they send a request to see it to your computer (Making them the client). This can all happen at the same time
+
+<li>
+Model of interaction:
+<table>
+<tr>
+<th>
+Server
+</th>
+<th>
+Client
+</th>
+</tr>
+<tr>
+<td>
+Starts first
+</td>
+<td>
+Starts second
+</td>
+</tr>
+<tr>
+<td>
+Does not need to know which client will contact it
+</td>
+<td>
+Must know what server to contact
+</td>
+</tr>
+<tr>
+<td>
+Waits passivly for contact
+</td>
+<td>
+Initiates contact
+</td>
+</tr>
+<tr>
+<td>
+Communication with a client starts by both sending And reciving data
+</td>
+<td>
+Communicates by sending and reciving data
+</td>
+</tr>
+<tr>
+<td>
+Stays running after transaction
+</td>
+<td>
+May terminate after transaction
+</td>
+</tr>
+</table>
+
+<li>
+How does a client identify a server:
+
+<ul>
+<li>
+Know the IP of the server (or resolvable dns name)
+
+</ul>
+<li>
+How does a client know what to application to talk to on the server:
+
+<ul>
+<li>
+A port number is used for a channel of communication for a particular application
+
+<li>
+Differnet applications can use the same port number <span id="CPSC 3600-8&#47;24&#47;16-BUT"></span><strong id="BUT">BUT</strong> only one application can run on that port at any given time:
+
+<ul>
+<li>
+Email port number:25 (SMTP)
+
+<li>
+Web server port number:80 (HTTP)
+
+<li>
+Secure web server port number: 443 (HTTPS)
+
+</ul>
+<li>
+Multiple clients can communicate over one port at the sametime
+
+<li>
+<a href="https:&#47;&#47;en.wikipedia.org&#47;wiki&#47;List_of_TCP_and_UDP_port_numbers">https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers</a> 
+
+</ul>
+<li>
+What is a socket:
+
+<ul>
+<li>
+A socket is an abstraction through which and application may send data
+
+</ul>
+</ul>
+<li>
+TCP/UDP:
+
+<ul>
+<li>
+TCP Relaiable and connection oriented:
+
+<ul>
+<li>
+Has error checking and overhead built in to make sure the packet was recived
+
+</ul>
+<li>
+UDP unreliable connectionless:
+
+<ul>
+<li>
+Typically faster than TCP due to less overhead in ensuring packet transmission
+
 </ul>
 </ul>
 </ul>
