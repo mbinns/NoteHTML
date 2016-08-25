@@ -46,7 +46,7 @@ Nishant Vishwamitra nvishwa@clemson.edu
 
 </ul>
 </ul>
-<div id="CPSC 4200-8&#47;24&#47;16"><h2 id="8&#47;24&#47;16">8/24/16</h2></div>
+<div id="CPSC 4200-Syllabus-8&#47;23&#47;16"><h3 id="8&#47;23&#47;16">8/23/16</h3></div>
 <ul>
 <li>
 The HB gary attack
@@ -104,6 +104,400 @@ An email containing the root password for the rootkit.com site
 </ul>
 <li>
 Educate against social engineering
+
+</ul>
+</ul>
+
+<div id="CPSC 4200-Syllabus-8&#47;25"><h3 id="8&#47;25">8/25</h3></div>
+<ul>
+<li>
+Defining Security:
+
+<ul>
+<li>
+The security of a system, application, or protocol is always relative to a few things:
+
+<ul>
+<li>
+A set of desired properties
+
+<li>
+An adversary with specific capabilities
+
+</ul>
+</ul>
+<li>
+CIA
+
+<li>
+Confidentiality:
+
+<ul>
+<li>
+Avoidance of unauthorized disclosure of information
+
+<li>
+Protection of data
+
+<li>
+Providing access to those who are allowed to see it
+
+<li>
+Disallowing access to everyone else
+
+<li>
+Tools for confidentiality:
+
+<ul>
+<li>
+Encryption:
+
+<ul>
+<li>
+Public and private keys so what when data is transmitted it is unreadable
+
+</ul>
+<li>
+ACL/Authorization:
+
+<ul>
+<li>
+Rules and policies that limit access to configential info
+
+<li>
+Access can be determinied by many factorsr:
+
+<ul>
+<li>
+What you are:
+
+<ul>
+<li>
+Biometrics
+
+<li>
+Roles
+
+</ul>
+<li>
+What you know:
+
+<ul>
+<li>
+Username
+
+<li>
+Password
+
+</ul>
+<li>
+What you have:
+
+<ul>
+<li>
+Smartcard
+
+<li>
+Keys
+
+</ul>
+</ul>
+</ul>
+<li>
+Physical security:
+
+<ul>
+<li>
+Locks
+
+<li>
+Doors
+
+<li>
+Windowless rooms
+
+<li>
+Sounds dampening
+
+<li>
+Faraday Cages
+
+<li>
+Air gap
+
+</ul>
+</ul>
+</ul>
+<li>
+Integrity:
+
+<ul>
+<li>
+The data is still in its original form and not been altered
+
+<li>
+Tools for intergrity:
+
+<ul>
+<li>
+Backups:
+
+<li>
+Checksum:
+
+<ul>
+<li>
+The computation of a function that maps the contents of a file to a cumerical value, A checksum function depends on the entire contents of a file and is designed in a way that even a small change to the input is likely to result in a different outut from the hash funciton
+
+</ul>
+<li>
+Data corecting codes:
+
+<ul>
+<li>
+Method for storing where small changes can be seen and fixed
+
+</ul>
+</ul>
+</ul>
+<li>
+Availability:
+
+<ul>
+<li>
+The property of data where it is ready to be used in a timely manner
+
+<li>
+Tools for availability:
+
+<ul>
+<li>
+Computational redundancies:
+
+<ul>
+<li>
+Computers and storage devices that serve as fallbacks in the case of failures
+
+</ul>
+<li>
+Physical protections:
+
+<ul>
+<li>
+Infranstructure meant to keep information avaiable even in the even of physical challenges (Natrual disasters)
+
+</ul>
+</ul>
+</ul>
+<li>
+Other security concepts:
+
+<ul>
+<li>
+A.A.A:
+
+<ul>
+<li>
+Authenticity:
+
+<ul>
+<li>
+Ability to determine the assureance properties are genuine
+
+<li>
+Authenticity tools:
+
+<ul>
+<li>
+digital signatures:
+
+<ul>
+<li>
+Systems commit to the authenticity of thier documents with nonrepudiation (no take backsies)
+
+</ul>
+</ul>
+</ul>
+<li>
+Assurance:
+
+<ul>
+<li>
+Refers to how trust is provided and managed in computer systems
+
+<li>
+Trust management:
+
+<ul>
+<li>
+Policies:
+
+<ul>
+<li>
+Behavioral expectations that people or systems must follow
+
+</ul>
+<li>
+Permissions:
+
+<ul>
+<li>
+Describe behaviors allowed by agents that interact with a system
+
+</ul>
+<li>
+Protections:
+
+<ul>
+<li>
+mechanisms put in place to enforce permissions and policies
+
+</ul>
+</ul>
+</ul>
+<li>
+Anonymity:
+
+<ul>
+<li>
+Certian records  cannot be attributed to any individual
+
+<li>
+Toos for anonymity:
+
+<ul>
+<li>
+Aggregation of data:
+
+<ul>
+<li>
+Mixing of all data so it is harder to pin down on one user
+
+</ul>
+<li>
+Mixing:
+
+<ul>
+<li>
+Interwinning of transactions, information, or communication in a way that cannot be traced to any individual
+
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<li>
+Threats and Attacks:
+
+<ul>
+<li>
+Eavesdripping:
+
+<ul>
+<li>
+Intercepting of information on its way to its destination
+
+<li>
+Packet sniffing
+
+<li>
+An attack on confidentiality
+
+</ul>
+<li>
+Alteration:
+
+<ul>
+<li>
+MITM Attacks
+
+<ul>
+<li>
+Where an attacker has a network stream sent to them where it can be copied, modified, and then retransmitted
+
+</ul>
+<li>
+Attack on Confidentiality, Integrity
+
+</ul>
+<li>
+DOS:
+
+<ul>
+<li>
+Itteruption in a service by sending lots of traffic/data to a server
+
+<li>
+Attack on avaibality
+
+</ul>
+<li>
+Masquerading(Impersinating):
+
+<ul>
+<li>
+Social engineering attacks like phishing and spoofing 
+
+<li>
+An attack on authenticity/confidentiality/anonymity
+
+</ul>
+<li>
+Repudiation:
+
+<ul>
+<li>
+Denail of a commitment or data receipt
+
+<li>
+Attempting to back out in the middle of a protocol that requires the differnet parties to provide receipts ack that they have gotten data
+
+<li>
+Attack on assurance
+
+</ul>
+<li>
+Correlation and traceback:
+
+<ul>
+<li>
+The integration of multiple data sources and information flows to figureout the source of information
+
+<li>
+An attack on anonymity
+
+</ul>
+</ul>
+<li>
+Authentication v Authorization:
+
+<ul>
+<li>
+Authentication:
+
+<ul>
+<li>
+Who or what can access a system
+
+<li>
+User name and password
+
+</ul>
+<li>
+Authorization:
+
+<ul>
+<li>
+Are you allowed to do that
+
+<li>
+ACP (Access control policies)
+
+<li>
+Restrictions on actions of authenticated users
+
+</ul>
+<li>
 
 </ul>
 </ul>
