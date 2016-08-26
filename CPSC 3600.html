@@ -1186,6 +1186,49 @@ Socket Abstraction: abstracts a mechanism for communication using differnt proto
 Socket API: The interface between application and the TCP/IP set of protocols
 
 </ul>
+<li>
+How to test if a website is up or down:
+
+<ul>
+<li>
+Example:
+<pre>
+ #Open a terminal
+ #Type the following command
+ #This can be host you want/also can resolve ip addresses
+ Ping acm.org 
+</pre>
+
+</ul>
+</ul>
+
+<ul>
+<li>
+Watching your traffic:
+
+<ul>
+<li>
+Example:
+<pre>
+#Open another terminal
+#Type the following command
+#Must be pinging activly to what ever host you want to watch Also can resolve ip addresses
+tcpdump host acm.org
+
+This will show you the hex value of the messages you are seeing
+tcpdump host -x acm.org
+
+12:02:18.753648 IP 64.238.147.121 &gt; 224.192.21.198.tigernet.wifi.dyn.clemson.edu: ICMP echo reply, id 26975, seq 19, length 64
+                             32b
+Memory address -&gt;	0x0000:  4500 0054 17cc 0000 3301 1480 40ee 9379
+                    0x0010:  c615 c0e0 0000 32e9 695f 0013 0a68 c057
+                    0x0020:  0000 0000 cf11 0b00 0000 0000 1011 1213
+                    0x0030:  1415 1617 1819 1a1b 1c1d 1e1f 2021 2223
+                    0x0040:  2425 2627 2829 2a2b 2c2d 2e2f 3031 3233
+                    0x0050:  3435 3637
+</pre>
+
+</ul>
 </ul>
 
 </body>
