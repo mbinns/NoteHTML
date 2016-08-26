@@ -980,5 +980,213 @@ Typically faster than TCP due to less overhead in ensuring packet transmission
 </ul>
 </ul>
 
+<div id="CPSC 3600-8&#47;24&#47;16-8&#47;26&#47;16"><h3 id="8&#47;26&#47;16">8/26/16</h3></div>
+<ul>
+<li>
+Sockets:
+
+<ul>
+<li>
+<a href="http:&#47;&#47;www.linuxhowtos.org&#47;C_C++&#47;socket.htm">http://www.linuxhowtos.org/C_C++/socket.htm</a>
+
+<li>
+Chapter 3 from the text
+
+</ul>
+<li>
+Internet application communication paradigms:
+
+<ul>
+<li>
+Two types of paradigms
+<table>
+<tr>
+<th>
+Stream
+</th>
+<th>
+Message
+</th>
+</tr>
+<tr>
+<td>
+Connection orienteed
+</td>
+<td>
+Connectionless
+</td>
+</tr>
+<tr>
+<td>
+1-1 connection
+</td>
+<td>
+Many to many
+</td>
+</tr>
+<tr>
+<td>
+Sequence of individual bytes
+</td>
+<td>
+Sequence of individual messages
+</td>
+</tr>
+<tr>
+<td>
+Arbitrary length transfer
+</td>
+<td>
+Each message limited to 64 bits (Can send less than 64 bits)
+</td>
+</tr>
+<tr>
+<td>
+Used by most applications
+</td>
+<td>
+Used for multimedia application
+</td>
+</tr>
+<tr>
+<td>
+Built on TCP
+</td>
+<td>
+Built on UDP
+</td>
+</tr>
+</table>
+
+<li>
+Stream:
+
+<ul>
+<li>
+Transfers a sequence of bytes
+
+<li>
+connection oriented
+
+<li>
+Bidirectional
+
+<li>
+No meaning attached to data and no boundaries inserted in data:
+
+<ul>
+<li>
+The order of the bytes doesn't care and different applications data can be interwoven
+
+</ul>
+</ul>
+</ul>
+<li>
+TCP:
+
+<ul>
+<li>
+Transmission control protocol:
+
+<ul>
+<li>
+Layer 4 in both the 7 and 5 layer models
+
+</ul>
+<li>
+Guarenteed delivery of uncourrupted packets to the layer above
+
+<ul>
+<li>
+Flow control
+
+<li>
+Error detection 
+
+<li>
+Congestion control
+
+<li>
+Retransmission of lost packets
+
+</ul>
+</ul>
+<li>
+TCP Headers:
+
+<ul>
+<li>
+Contains a checksum:
+
+<ul>
+<li>
+Used to check for errors and data corruption
+
+</ul>
+</ul>
+<li>
+UDP:
+
+<ul>
+<li>
+Connectionless
+
+<li>
+User Datagram Protocol:
+
+<ul>
+<li>
+Faster because less overhead
+
+<li>
+If I am not waiting to see if the data got there I can send the data in a quicker timeframe
+
+</ul>
+<li>
+If the sender sends N bytes in a message, a receiver will find exactly N bytes in the incoming message
+
+<li>
+Paradigms allows unicast, multicast, or broadcast delivery
+
+</ul>
+<li>
+UDP Headers:
+
+<ul>
+<li>
+Also contains a checksum:
+
+<ul>
+<li>
+If the checksum is bad then the packet gets dropped
+
+</ul>
+</ul>
+<li>
+Why use an unreliable protocol:
+
+<ul>
+<li>
+UDP is great for real-time applications
+
+<ul>
+<li>
+VOIP/Audio/Video stream
+
+</ul>
+</ul>
+<li>
+What is a socket:
+
+<ul>
+<li>
+Socket Abstraction: abstracts a mechanism for communication using differnt protocol families
+
+<li>
+Socket API: The interface between application and the TCP/IP set of protocols
+
+</ul>
+</ul>
+
 </body>
 </html>
