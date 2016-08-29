@@ -466,5 +466,75 @@ You need to ensure your mode is correct for what you are trying to do
 </ul>
 </ul>
 
+<div id="CPSC 4820-8&#47;23&#47;16-8&#47;29&#47;16"><h3 id="8&#47;29&#47;16">8/29/16</h3></div>
+<ul>
+<li>
+How do you get the device to stop doing what its doing
+
+<ul>
+<li>
+Hold the reset button
+
+</ul>
+<li>
+Language reference sheet
+
+<ul>
+<li>
+<a href="http:&#47;&#47;www.energia.nu&#47;Reference_index.html">http://www.energia.nu/Reference_index.html</a>
+
+</ul>
+<li>
+You can use double and floats on these devices but they don't have fpu (Floating Point Units):
+
+<li>
+Language overview:
+
+<ul>
+<li>
+Interrupts
+
+<ul>
+<li>
+Attach intterupts says if a particular pin does something then interrupts:
+
+<ul>
+<li>
+Example:
+
+<ul>
+<li>
+Everytime this button is push then I will now blink once then return back to the loop I was in before then
+
+</ul>
+</ul>
+<li>
+Interrupts will get buffered... to a point but if you hold the interrupt context long enough then you cannot get back out
+
+<ul>
+<li>
+Example:
+
+<ul>
+<li>
+An infinite loop in an ISR will result in a stuck chunk of code
+
+</ul>
+</ul>
+</ul>
+<li>
+INLINE:
+
+<ul>
+<li>
+This tells the compiler to not stick your function into a framestack which will allow your code to respond faster:
+
+<li>
+This will blow up your code though (Memory issue)
+
+</ul>
+</ul>
+</ul>
+
 </body>
 </html>
