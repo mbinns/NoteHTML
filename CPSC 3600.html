@@ -1231,5 +1231,98 @@ Memory address -&gt;	0x0000:  4500 0054 17cc 0000 3301 1480 40ee 9379
 </ul>
 </ul>
 
+<div id="CPSC 3600-8&#47;24&#47;16-9&#47;2&#47;16"><h3 id="9&#47;2&#47;16">9/2/16</h3></div>
+<ul>
+<li>
+Socket API User Kernel Interaction
+
+<ul>
+<li>
+Sockets sit between layer 4 and 5
+
+</ul>
+<li>
+Most users live in the application layer:
+
+<ul>
+<li>
+All applications send data using the same shared medium
+
+</ul>
+<li>
+Network models
+
+<ul>
+<li>
+Meaning there are buffers between the layers in the network models
+
+<li>
+A buffer overflow can exist inbetween these layers:
+
+</ul>
+<li>
+Protocol and address families:
+
+<ul>
+<li>
+Protocol family represents the protocol type:
+
+<ul>
+<li>
+Many protocols exist (42 in total)
+
+<ul>
+<li>
+Bluetooth
+
+<li>
+TCP
+
+<li>
+IPv4
+
+<li>
+UDP
+
+<li>
+IPv6
+
+</ul>
+</ul>
+<li>
+Sometimes there really is no difference between the protocol family and address family and the seperation is only historical
+
+</ul>
+<li>
+Resource limits:
+
+<ul>
+<li>
+In POSIX everything is treated as a file!
+
+<ul>
+<li>
+Meaning when you open a socket you also need to close that socket
+
+<li>
+Sockets consume resources
+
+<ul>
+<li>
+You should use counters to keep track of how many are open because there is a limit to how many you can have open
+
+</ul>
+</ul>
+</ul>
+<li>
+More resources on networking
+
+<ul>
+<li>
+<a href="http:&#47;&#47;www.cucyber.net&#47;presentations&#47;networking&#47;intro&#47;">http://www.cucyber.net/presentations/networking/intro/</a>
+
+</ul>
+</ul>
+
 </body>
 </html>
