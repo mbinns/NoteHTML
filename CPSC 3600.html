@@ -1315,6 +1315,102 @@ You should use counters to keep track of how many are open because there is a li
 </ul>
 </ul>
 <li>
+DNS:
+
+<ul>
+<li>
+IP addresses:
+
+<ul>
+<li>
+Dotted Quad Notation
+
+<li>
+32 bits
+
+<li>
+Each octet is 8bits:
+
+<ul>
+<li>
+Because of this each octet can only have a max of 255 numbers
+
+</ul>
+</ul>
+<li>
+A subnet mask or CIDR notation defines the bondaries of numbers
+
+</ul>
+<li>
+Client server interaction:
+
+<ul>
+<li>
+A server is bound to a socket it is told to keep checking that socket for incomming traffic
+
+<li>
+A Client will send information to an address and port
+
+<li>
+The server will then reply to the client over the same
+
+<li>
+A server can be bound to all networking interfaces so it can catch information coming in on any avenue:
+
+<ul>
+<li>
+If you dont assign a program a port then the kernal would assign a random port. IE you and the client would never know what port and could not communicate
+
+</ul>
+</ul>
+<li>
+Endian's:
+
+<ul>
+<li>
+Big-Endian - MSB (Most signifigant bit) is on the left 
+
+<li>
+Little-Endian - MSB is on the right
+
+<li>
+The htonl() and htons() makes sure your endianess is correct
+
+</ul>
+<li>
+Addresses:
+
+<ul>
+<li>
+Each network interface can only have one IPv4 address
+
+<li>
+Each network interface can have more than one IPv6 address
+
+<li>
+The 127.0.0.1 address is your local computer, sometimes called loopback or localhost
+
+<li>
+How to find your network interface information
+
+<ul>
+<li>
+ip a
+
+<li>
+ifconfig
+
+<li>
+Windows:
+
+<ul>
+<li>
+ipconfig
+
+</ul>
+</ul>
+</ul>
+<li>
 More resources on networking
 
 <ul>
