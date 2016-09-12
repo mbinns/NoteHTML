@@ -1420,5 +1420,242 @@ More resources on networking
 </ul>
 </ul>
 
+<div id="CPSC 3600-8&#47;24&#47;16-9&#47;7&#47;16"><h3 id="9&#47;7&#47;16">9/7/16</h3></div>
+<ul>
+<li>
+HOMEWORK DUE Sept 13th:
+
+<ul>
+<li>
+<a href="https:&#47;&#47;docs.google.com&#47;document&#47;d&#47;1IGst5SwwJwnk0618OemDwE8R9fxEn1F5ApmFfstPNk4&#47;preview">https://docs.google.com/document/d/1IGst5SwwJwnk0618OemDwE8R9fxEn1F5ApmFfstPNk4/preview</a>
+
+</ul>
+<li>
+Reliability and Transmission:
+
+<ul>
+<li>
+Errors cannot be eliminated completely
+
+<li>
+Errors can be detected and corrected
+
+<li>
+Error detection adds overhead
+
+<li>
+Examples:
+
+<ul>
+<li>
+One bit error in a bank transfer is signifigant:
+
+<ul>
+<li>
+00001010 (10$)
+
+<li>
+10001010 (138$)
+
+</ul>
+<li>
+One bit error in a picture is non important the overall messge is still the same
+
+</ul>
+</ul>
+<li>
+Types of errors:
+
+<ul>
+<li>
+Single bit error:
+
+<ul>
+<li>
+A single bit in a block of bits is changed and all other bits in the block are unchanged. This often results from very short duration interference
+
+<li>
+Burst error:
+
+<ul>
+<li>
+Multiple bits in a block of data is changed (Long durration interference)
+
+</ul>
+<li>
+Erasure (ambiguity):
+
+<ul>
+<li>
+The signal that arrives at a receiver is ambiguous and cannot correcspond to to either a logical 1 or 0
+
+</ul>
+</ul>
+</ul>
+<li>
+Error handling strategies:
+
+<ul>
+<li>
+Channel coding:
+
+<ul>
+<li>
+Forward error correction:
+
+<ul>
+<li>
+Add additional information to data(checksum) to allow the sender to verify the correctness
+
+</ul>
+<li>
+Automatic Repeat Request (ARQ):
+
+<ul>
+<li>
+Sender and recciver exchange messages (TCP 3-way handshake) where they tell one another that data is getting sent and recived every time.
+
+</ul>
+</ul>
+</ul>
+<li>
+Single Parity Checking:
+
+<ul>
+<li>
+On the sending side an encoder adds an extra bit called a parity bit:
+
+<ul>
+<li>
+The reciver will remove this bit and use it to check all the other bits in a block
+
+</ul>
+<li>
+The Sender and Receiver both must agree to use a type of bit (odd/even):
+
+<ul>
+<li>
+Even: Parity bit of 0
+
+<li>
+Odd: Parity bit of 1
+
+</ul>
+<li>
+Can detect errors but cannot correct for them
+
+<li>
+Also cannot detect errors if an even number of bits was changed (I.E. two bits changing)
+
+<li>
+To use this, you XOR all the bits with the parity bit and check the result
+
+</ul>
+<li>
+Hamming Distance:
+
+<ul>
+<li>
+The number of bits that must be changed to get from the encoding to a codeword
+<pre>
+XOR the bits
+
+001
+010
+---
+011 distance is 2 because two bits had to change
+</pre>
+
+</ul>
+<li>
+Row and column parity (RAC)
+
+<ul>
+<li>
+Both sender and reciver must agree on a length
+
+<li>
+To send data you convert it into a matrix form and add a parity for every row and every column
+
+<li>
+Can only correct 1 bit errors
+<pre>
+DATA in the box parity bits on the border
+--------
+| 1011 | 1
+| 0010 | 1
+| 1010 | 0
+-------- 
+  0011   0
+  
+DATA is put together top down
+101100101010
+</pre>
+
+</ul>
+<li>
+16 bit checksum used in the internet:
+
+<ul>
+<li>
+The algorithm allows a message to be as long as you want/hardware supports
+
+<ul>
+<li>
+The checksum is over the whole messge
+
+<li>
+If the check sum does not = 16 bits it will append zeros
+
+<li>
+Add the values:
+
+<ul>
+<li>
+With the over flow bit you add it to the end
+
+<li>
+Then you flip all the bits
+
+</ul>
+</ul>
+<li>
+The reciver will take the checksum and preform the same operation and if result is 0 then there is not error
+<pre>
+ 0100100001100101 &lt;-- data
+ 0110110001101100 &lt;-- data 
+ 0110111100100001 &lt;-- data
+10010001111110010 &lt;-- Added data with overflow
+-----------------
+0010001111110010
+               1 &lt;-- Add overflow
+-----------------
+0010001111110011
+1101110000001100 &lt;-- flip all bits this is your checksum
+</pre>
+
+</ul>
+<li>
+Cyclic Redundance code:
+
+<ul>
+<li>
+Division of binary numbers under the assumption of no carries
+
+<li>
+Sender and reciver must agree on divisor
+
+<li>
+Can be carried out very fast by hardware
+
+<li>
+Great at detecting errors
+
+<li>
+Arbitrary data length
+
+</ul>
+</ul>
+
 </body>
 </html>

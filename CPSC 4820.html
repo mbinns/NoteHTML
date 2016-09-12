@@ -535,6 +535,115 @@ This will blow up your code though (Memory issue)
 </ul>
 </ul>
 </ul>
+<div id="CPSC 4820-8&#47;23&#47;16-9&#47;7&#47;16"><h3 id="9&#47;7&#47;16">9/7/16</h3></div>
+<ul>
+<li>
+SCK - Keeps everything syncronized
+
+<li>
+CSn - Use this pin to select the chip you want to talk to
+
+<ul>
+<li>
+Uses active low, this means that it will be "on" when the voltage is low
+
+</ul>
+<li>
+GDO2 - Ways to send an interrupt 
+
+<li>
+GDO0 - Ways to send an interrupt
+
+<li>
+C1101 API:
+
+<ul>
+<li>
+void RX();
+
+<ul>
+<li>
+sits and waits for messages, higher energy consumption
+
+</ul>
+<li>
+void Sleep();
+
+<ul>
+<li>
+Sleeps, and consumes very very little energy
+
+</ul>
+<li>
+void WakeUp();
+
+<ul>
+<li>
+Wakes up from sleep
+
+</ul>
+<li>
+void SendData(uint8_t *txBuffer, uint8_t size);
+
+<ul>
+<li>
+*NoWait
+
+<li>
+Sends data has a no wait version which will send data now and will not ensure you are not overwhelming the chip
+
+</ul>
+<li>
+Rssi():
+
+<ul>
+<li>
+maybe not very good for ranging tachnique
+
+</ul>
+</ul>
+</ul>
+<div id="CPSC 4820-8&#47;23&#47;16-9&#47;9&#47;16"><h3 id="9&#47;9&#47;16">9/9/16</h3></div>
+<ul>
+<li>
+Debugging:
+
+<ul>
+<li>
+What is the difference between embedded and standard software dev
+
+<ul>
+<li>
+Visibility on what is happening
+
+</ul>
+<li>
+Tools and steps:
+
+<ul>
+<li>
+Use a multimeter to check if you have grounding issues
+
+<li>
+Use a multimeter to check if you have power going to vcc and grnd
+
+<li>
+Connect the multimeter to gpio pin and toggle it when you get to certain points of your code (kinda like printf)
+
+</ul>
+<li>
+Ints on this board are 2 bytes or 16 bits
+
+<li>
+Serial.print() is capable of slowing down the board data
+
+<li>
+Don't use malloc because it can cause bugs that don't always show up
+
+<li>
+
+</ul>
+</ul>
 
 </body>
 </html>
