@@ -1657,5 +1657,59 @@ Arbitrary data length
 </ul>
 </ul>
 
+<div id="CPSC 3600-8&#47;24&#47;16-9&#47;16&#47;16&#47;"><h3 id="9&#47;16&#47;16&#47;">9/16/16/</h3></div>
+<ul>
+<li>
+ICMP: Internet control message protocol:
+
+<ul>
+<li>
+IP is unreliable connectionless datagram delivery
+
+<li>
+Message format:
+
+<ul>
+<li>
+Code further identifies message type
+
+<li>
+Checksum reply might have message specific header components
+
+<li>
+Error messages have ICMP header and in the data they include the IP header of the offending packet plus the nesxt 8 bytes
+
+<li>
+Header contains:
+
+<ul>
+<li>
+type/code/checksum
+
+<li>
+data
+
+</ul>
+</ul>
+<li>
+Ping is a type of ICMP:
+
+<ul>
+<li>
+Echo reply/Echo request is involved in a ping
+
+</ul>
+</ul>
+<li>
+Routers forward datagrams one network hop at a time
+
+<li>
+When a datagram  is dropped an error message is sent
+
+<li>
+When a host wants to find some info a control message is sent
+
+</ul>
+
 </body>
 </html>
