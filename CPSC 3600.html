@@ -1684,8 +1684,19 @@ Header contains:
 
 <ul>
 <li>
-type/code/checksum
+type/code/checksum:
 
+<ul>
+<li>
+Type = 2bytes
+
+<li>
+Code = 2bytes
+
+<li>
+Checksum = 4bytes
+
+</ul>
 <li>
 data
 
@@ -1709,7 +1720,597 @@ When a datagram  is dropped an error message is sent
 <li>
 When a host wants to find some info a control message is sent
 
+<li>
+TCP Dump Demo!
+
+<li>
+ICMP and UDP:
+
+<ul>
+<li>
+Why would that be different, they would be different because the header structure is different. Both of them have 8bytes for the header but when viewed in TCP dump in Hex output the location of data would be different
+
 </ul>
+</ul>
+
+
+<div id="CPSC 3600-QUIZ 3 Study"><h2 id="QUIZ 3 Study">QUIZ 3 Study</h2></div>
+<div id="CPSC 3600-QUIZ 3 Study-Presentation 10"><h3 id="Presentation 10">Presentation 10</h3></div>
+<ul>
+<li>
+Technologies related to extending lan:
+
+<ul>
+<li>
+Bridges
+
+<li>
+Repeaters
+
+</ul>
+<li>
+Distance Limitations and LAN DEsign
+
+<ul>
+<li>
+Hardware for LAN is designed to emit onl a limited amount of energy for transmisisons
+
+<li>
+If the signal extends beyond that distance then it may not be strong enought to be interpereted
+
+</ul>
+<li>
+Fiber Modem Extensions:
+
+<ul>
+<li>
+Extension mechanisms do not increas strength of signals
+
+</ul>
+<li>
+Repeaters:
+
+<ul>
+<li>
+Do not understand the singnal just amplifies it by resending it bit by bit.
+
+<li>
+If the signal is corrupted when it reaches the repeater then it will be corrupted when it leaves
+
+</ul>
+<li>
+Bridges:
+
+<ul>
+<li>
+Listens in promisc mode
+
+<li>
+Forwards any packets from one side to another bridging the two lans
+
+<li>
+this allows lans to behave as one giant lan
+
+<li>
+Use mac addresses to perform filtering, which is when a bridge examines the destination address and doesn't forward it unless necessary
+
+</ul>
+<li>
+Adaptive Bridges:
+
+<ul>
+<li>
+Learn the location of computers automatically
+
+<ul>
+<li>
+Use the source header of the packet to learn location of computers on the network
+
+<li>
+A bridge allows simultanious travel over a segment
+
+<li>
+A computer comminicating with a print will not send information to the ISP
+
+</ul>
+</ul>
+<li>
+Distributed Spanning Tree
+
+<ul>
+<li>
+Prevents endless loops
+
+<li>
+SPT (Spanning Tree Protocol)
+
+<ul>
+<li>
+3 steps:
+
+<ul>
+<li>
+Root election:
+
+<ul>
+<li>
+Bridges multicast their ID and the smallest ID is chosen:
+
+<ul>
+<li>
+16bit priority number
+
+<li>
+48bit MAC address
+
+<li>
+Bridges will compare priority first then use MAC addresses to break a tie
+
+</ul>
+</ul>
+<li>
+Shortest Path computation:
+
+<ul>
+<li>
+Each bridge computes a shortes path to the root which results in the spanning tree
+
+</ul>
+<li>
+Forwarding:
+
+<ul>
+<li>
+An interface that connects to the shortest path is enabled for forwarding packets
+
+<li>
+An interface that does not connect to the shortest oath is blocked
+
+</ul>
+<li>
+Bridges use a multicast address reserved for them:
+
+<ul>
+<li>
+01:80:C2:00:00:00
+
+<ul>
+<li>
+Ethernet address
+
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<li>
+Ethernet/Layer 2 Switching:
+
+<ul>
+<li>
+Devices that forwards packets of data
+
+<li>
+Hubs forward analog signals (bit by bit)
+
+<li>
+Switches forward whole packets
+
+<li>
+Each port on a switch has an intellegent interface containing a CPU, memory, and other hardware required to accept an incoming connection.
+
+<li>
+Switches support parrellism:
+
+<ul>
+<li>
+N/2 connections at the same time
+
+</ul>
+</ul>
+<li>
+VLAN Switches:
+
+<ul>
+<li>
+Virtual Local Area Netowrk Switch is a switch extended by adding virualization:
+
+<ul>
+<li>
+Emulating multiple switches on one piece of harware
+
+</ul>
+<li>
+Shared VLANS on multiple switches are a way to extend the VLAN:
+
+<ul>
+<li>
+IEEE 802.1Q specifices how this happens
+
+<ul>
+<li>
+Shoves a 4byte vlan packeet in the frame header and if the vlan ids match then it gets routed
+
+</ul>
+</ul>
+</ul>
+</ul>
+
+
+<div id="CPSC 3600-QUIZ 3 Study-Lecture 31"><h3 id="Lecture 31">Lecture 31</h3></div>
+<ul>
+<li>
+WAN Technologies and Dynamic:
+
+<ul>
+<li>
+Interconnecting packet switches among sites
+
+<li>
+Cpacity can be planned for and redundancy built in
+
+</ul>
+<li>
+WAN Addressing:
+
+<ul>
+<li>
+Follows hierachical addressing:
+
+<li>
+Conceptual Addresssing:
+
+<ul>
+<li>
+site, computer at site
+
+</ul>
+<li>
+In practice:
+
+<ul>
+<li>
+Packet Switch, Local connection on switch
+
+</ul>
+</ul>
+<li>
+Next hop Forwarding:
+
+<ul>
+<li>
+Forwarding uses only the packet switch part of the address
+
+<li>
+Deleivery uses the other half
+
+<li>
+If a packet reaches a destination switch, then it will beb delivered. If not then it will be sent closer to the desitination switch
+
+</ul>
+<li>
+Forwarding table:
+
+<ul>
+<li>
+To make the computation efficient, packet switches use table lookup
+
+<li>
+Contructing a forwarding table:
+
+<ul>
+<li>
+Two basic approaches
+
+<ul>
+<li>
+Static routing:
+
+<ul>
+<li>
+Entries inserted when system boots and do not chang e
+
+</ul>
+<li>
+Dynamic Routing:
+
+<ul>
+<li>
+Initial entries inserted when system boots routing software continually updates entries
+
+</ul>
+</ul>
+</ul>
+</ul>
+<li>
+Routing software:
+
+<ul>
+<li>
+Computes shortest path, and updates the forwarding table
+
+<li>
+Default routes, allows a single entry in a forwaring table to replace a long list of entries
+
+</ul>
+<li>
+Dynamic Routing:
+
+<ul>
+<li>
+Consitant optimal routes: automatic failure corrections
+
+<li>
+Two basic algorithms:
+
+<ul>
+<li>
+LSR
+
+<li>
+DVR
+
+</ul>
+</ul>
+<li>
+LSR:
+
+<ul>
+<li>
+Each node:
+
+<ul>
+<li>
+Sends link status across network
+
+<li>
+Computes shortest paths independently
+
+<li>
+Does not rely on computation performed by others
+
+</ul>
+<li>
+Test connections between node periodiclly:
+
+<ul>
+<li>
+Tests connection between them
+
+<li>
+Says the link between X and Y is either up or down
+
+</ul>
+<li>
+Each node:
+
+<ul>
+<li>
+Collects incoming broadcast messages and creates a graph
+
+<li>
+Uses dijkstra's SPF
+
+</ul>
+</ul>
+<li>
+DVR:
+
+<ul>
+<li>
+Distance Vector Routing
+
+<li>
+Bellman Ford routing
+
+<li>
+Unlike LSR, DVR arranges for a packet swith to send a complete list of destination and current cost of reaching each
+
+<li>
+Node:
+
+<ul>
+<li>
+Recives information from neighboors
+
+<li>
+Combines information from all neighboors with local information
+
+<li>
+Sends copy of processed information to all neighbors
+
+</ul>
+<li>
+operates like a hive mind
+
+<li>
+Sends route advertisement:
+
+<ul>
+<li>
+I can reach site X, and its distance I Y
+
+</ul>
+</ul>
+<li>
+Measuring the distance of a route:
+
+<ul>
+<li>
+Possible measures:
+
+<ul>
+<li>
+Hops
+
+<li>
+Delays
+
+<li>
+Throughput
+
+<li>
+Economic or administrative cost
+
+</ul>
+</ul>
+<li>
+Routing in Ad Hoc Netoworks:
+
+<ul>
+<li>
+What makes ad hoc networks different from wired networks is that the topology may be changing at all times
+
+</ul>
+<li>
+Ad hoc On-demand distance vector
+
+<ul>
+<li>
+Routes are discoved on demand
+
+<li>
+Saves a lot of reconfiguring if the topology changes
+
+</ul>
+</ul>
+
+
+<div id="CPSC 3600-QUIZ 3 Study-Presentation 11"><h3 id="Presentation 11">Presentation 11</h3></div>
+<ul>
+<li>
+Internet Addressing
+
+<li>
+IP4 V IP6
+
+<li>
+Hour Glass Model:
+
+<ul>
+<li>
+IP is the epicenter of communication
+
+<li>
+Internet comminucation follows an hourglass model.
+<pre>
+APP 1       APP 2       APP 3
+
+             IP
+
+COM 1       COM 2       COM 3
+</pre>
+
+</ul>
+<li>
+Protocols (IP)
+
+<ul>
+<li>
+hid the nitty gritty of the underlying network so that all devices think they are all on one big network
+
+</ul>
+<li>
+IP's are divided into two segments:
+
+<ul>
+<li>
+Prefix:
+
+<ul>
+<li>
+Subnet address
+
+<li>
+255.255.255.0
+
+</ul>
+<li>
+Suffix:
+
+<ul>
+<li>
+0.0.0.255
+
+</ul>
+</ul>
+<li>
+Authorrity for addresses:
+
+<ul>
+<li>
+ICANN old authority
+
+<li>
+Registrars are now responsible
+
+<li>
+Each geographic location is assigned a registrar
+
+<li>
+Registrars make blocks avaiable to ISPs
+
+</ul>
+<li>
+Classes addressing
+
+<ul>
+<li>
+Like subnet, very similar
+
+<li>
+Routers use the condition N == (D&amp;M) where N is the network prefix and D is the destination address and M is the Mask
+
+<li>
+Network prefix with the value
+
+<li>
+10000000 00001010 00000000 00000000
+
+</ul>
+</ul>
+
+
+<div id="CPSC 3600-QUIZ 3 Study-Presentation 12"><h3 id="Presentation 12">Presentation 12</h3></div>
+<ul>
+<li>
+CIDR Notation Uses with IPv4:
+
+<ul>
+<li>
+Classless inter-domain routing (CIDR)
+
+<li>
+CIDR starts at 28 (least) and goes to 13 most:
+
+<ul>
+<li>
+28 = 16 hosts on the network
+
+<li>
+13 = 524288 hosts on the network
+
+<li>
+Each step increases double capacity
+
+</ul>
+</ul>
+<li>
+MultiHomed Hosts:
+
+<ul>
+<li>
+If one conneciton fails, the host can still reach the internet through a second connection
+
+<li>
+
+
+</ul>
+</ul>
+
+<p>
+Experimental
+</p>
 
 </body>
 </html>
