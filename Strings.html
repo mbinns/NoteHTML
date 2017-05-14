@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Strings</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<div id="Indexing"><h1 id="Indexing">Indexing</h1></div>
+<ul>
+<li>
+You can access a specific char of a string by using an index []
+
+<li>
+Starts at 0 and is the length of a string
+
+<ul>
+<li>
+string[1]
+
+<li>
+Will provide the second character of the string
+
+</ul>
+<li>
+Reverse indexing
+
+<ul>
+<li>
+Starts indexing at 1
+
+<li>
+string[-1]
+
+<li>
+Will provide the last character in the string (this cannot start at zero because there is no -0 
+
+</ul>
+<li>
+
+<pre python>
+# will provide the length of the string
+string = "I am a string"
+len(string)
+print(string[1])
+print(string[-1])
+</pre>
+
+<li>
+You cannot assign a character using string indexing
+
+</ul>
+
+<div id="String cutting"><h1 id="String cutting">String cutting</h1></div>
+<ul>
+<li>
+This allows you to return a range of characters in a string and is similar to indexing
+
+<li>
+[#:#] is the format to follow
+
+<ul>
+<li>
+Examples:
+<pre python>
+string = "hello mack!"
+string[3:7] # would return 'lo ma'
+string[:3] # would return 'hell' because it starts at zero and returns to the 3 index
+string[3:] #would return 'lo mack!' because it starts at the 3rd position and goes until the end
+</pre>
+
+</ul>
+</ul>
+
+<div id="Concatenation"><h1 id="Concatenation">Concatenation</h1></div>
+<ul>
+<li>
+This is putting the two strings into one line
+
+<li>
+Uses the '+' operator to glue them together
+
+<li>
+Example:
+
+<ul>
+<li>
+
+<pre python>
+string = "hello "
+string1 = "mack!"
+string3 = string + string1 # string3 contain 'hello mack!'
+</pre>
+
+</ul>
+</ul>
+
+<ul>
+<li>
+You can repeat concatenation using the multiplier 
+
+<ul>
+<li>
+Follows order of string operations
+
+<li>
+Example:
+
+<ul>
+<li>
+
+<pre python>
+    string = "hello "
+    string1 = "mack!"
+    string3 = 2 * (string + string1) # string3 contain 'hello mack!hello mack!'
+</pre>
+
+</ul>
+</ul>
+</ul>
+
+<div id="Format method"><h1 id="Format method">Format method</h1></div>
+<ul>
+<li>
+Formatting is inserting dynamic values into a string
+
+<li>
+{0},{1},etc is the formatting strings
+
+<li>
+Variables can also be used in place of the {0} indexing method or also along side of them, BUT in the format string you must follow the indexing
+
+<li>
+You can also format as binary, hex, octal using {:b} or {:x} or {:o}
+
+<li>
+Example:
+
+<ul>
+<li>
+
+<pre python>
+# indexing example
+print("today I had {0} cups of {1}".format(3,"coffee"))
+# variable example
+print("today I had {x} cups of {z}".format(x = 3,z = "coffee"))
+# combo example notice how the index had to come first
+print("today I had {x} cups of {0}".format("coffee", x = 3))
+# Binary
+print("today I had {:b} cups of {0}".format("coffee", x = 3))
+# Hex
+print("today I had {:x} cups of {0}".format("coffee", x = 3))
+# octal
+print("today I had {:o} cups of {0}".format("coffee", x = 3))
+
+</pre>
+
+</ul>
+</ul>
+
+</body>
+</html>
