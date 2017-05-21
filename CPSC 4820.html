@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>CPSC 4820</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<div id="CPSC 4820"><h1 id="CPSC 4820">CPSC 4820</h1></div>
+<div id="CPSC 4820-Syllabus"><h2 id="Syllabus">Syllabus</h2></div>
+<ul>
+<li>
+You can work with other things:
+
+<ul>
+<li>
+If oyu find a driver or create something distrobute it
+
+<li>
+Site plagerism
+
+</ul>
+</ul>
+
+<div id="CPSC 4820-8&#47;18&#47;16"><h2 id="8&#47;18&#47;16">8/18/16</h2></div>
+<ul>
+<li>
+What is an embedded system?
+
+<ul>
+<li>
+There can be multiple definitions
+
+<li>
+A non-traditional computer with constraints:
+
+<ul>
+<li>
+Power
+
+<li>
+Mobile
+
+<li>
+Memory
+
+<li>
+Specialized purpose 
+
+</ul>
+</ul>
+<li>
+What does an emebeded computer have in it:
+
+<ul>
+<li>
+Sensors:
+
+<ul>
+<li>
+GPS
+
+<li>
+Temp
+
+<li>
+Light
+
+<li>
+Humiditiy
+
+</ul>
+<li>
+Power:
+
+<ul>
+<li>
+Batteries
+
+<li>
+Solar Panel
+
+<li>
+Some way to get energy
+
+</ul>
+<li>
+Processing Core:
+
+<ul>
+<li>
+MCU
+
+<ul>
+<li>
+Typically have the memory on chip rather than using a system bus like normal cpu's
+
+<li>
+Have a lot baked in
+
+</ul>
+<li>
+Additionall memory
+
+<li>
+IO:
+
+<ul>
+<li>
+ADC - Analog to digital converter
+
+<li>
+DAC - Digital to analog converter
+
+<li>
+Digital bus: (Different parts use different communication)
+
+<ul>
+<li>
+UART
+
+<li>
+SPI
+
+<li>
+I2C
+
+</ul>
+</ul>
+</ul>
+<li>
+UI (User Interface):
+
+<ul>
+<li>
+Could be buttons and lights
+
+<li>
+Vibration and tactile feedback
+
+</ul>
+<li>
+Communication:
+
+<ul>
+<li>
+Radios
+
+</ul>
+<li>
+Programming port
+
+<li>
+Actuator:
+
+<ul>
+<li>
+Allows it to something
+
+</ul>
+<li>
+Non-volitle storage:
+
+<ul>
+<li>
+Flash
+
+<li>
+FRAM
+
+</ul>
+<li>
+Protection:
+
+<ul>
+<li>
+Case
+
+</ul>
+</ul>
+</ul>
+
+<div id="CPSC 4820-8&#47;23&#47;16"><h2 id="8&#47;23&#47;16">8/23/16</h2></div>
+<ul>
+<li>
+Three basic principals:
+
+<ul>
+<li>
+Voltage:
+
+<ul>
+<li>
+Described as potential energy
+
+<li>
+Some kind of battery that has electric potential where current will flow from high to low
+
+<li>
+Volts
+
+</ul>
+<li>
+Current:
+
+<ul>
+<li>
+Flow of electricty from high to low
+
+<li>
+Amps
+
+<li>
+Electrons flow negative to positive, but we think of current as going positive to negative
+
+</ul>
+<li>
+Resitance:
+
+<ul>
+<li>
+Resists the flow of electricity
+
+<li>
+Ohms
+
+<li>
+Resitance decreases the amperage flowing through:
+
+<ul>
+<li>
+Ohms Law is the measurement of this
+
+</ul>
+</ul>
+</ul>
+<li>
+Ohms Law:
+
+<ul>
+<li>
+V=IR
+
+<li>
+Voltage=CurrentxResitance
+
+</ul>
+<li>
+Power:
+
+<ul>
+<li>
+P=IV
+
+<li>
+Power=CurrentxVoltage
+
+</ul>
+<li>
+Why does ohms law matter:
+
+<ul>
+<li>
+Because you need to know how long a battery is going to last
+
+<li>
+And because some components act as resisters
+
+<li>
+Diodes:
+
+<ul>
+<li>
+Restirct the flow of current in one direction
+
+<li>
+Typically have resisters in series to limit the current to the diaoded to stop it from blowing out
+
+</ul>
+</ul>
+<li>
+Voltage divider:
+
+<ul>
+<li>
+Anytime you have a voltage you want divided down you can use two resistors of the same resitance
+<pre>
+Voltage Divider:
+---------------------
+R2xVin
+------ = Vout
+R1+R2
+</pre>
+
+</ul>
+<li>
+Pull up and Pull down resistors:
+
+<ul>
+<li>
+These are good for defining default behaviors
+<pre>
+
+MCU|---------------|Sensor
+
+If both the sensor and MCU tries to send current at the same time a shortcuircut can happen
+If no one sends any current then the current can drift, meaning that it could sometimes be a 1 or sometimes be a 0
+    You want a baseline current through the wire
+
+Pull Up
+Both sides of the resistor are 5v
+           5V
+           Z
+MCU|---------------|Sensor
+The resistor in the middle between the MCU and the sensor will pull the drifitng voltage up to the source voltage
+The higher the resistance the slower the shift to the source voltage
+
+Pull Down
+Both sides of th resistor are 0
+MCU|---------------|Sensor
+           Z
+           Ground
+
+The same in place as the pull up but this pull the voltage down to zero over time
+You typically want the lowest resistence that gives you the behavior you want
+</pre>
+
+</ul>
+</ul>
+
+<div id="CPSC 4820-8&#47;23&#47;16-8&#47;24&#47;16"><h3 id="8&#47;24&#47;16">8/24/16</h3></div>
+<ul>
+<li>
+Reading a data sheet:
+
+<ul>
+<li>
+First place to look would be the functional block diagram
+
+<ul>
+<li>
+You want to look at how does it actually communicate:
+
+<ul>
+<li>
+Some are digital and some are analogue
+
+</ul>
+</ul>
+<li>
+Specifications table:
+
+<ul>
+<li>
+Power consumption errors
+
+</ul>
+<li>
+Absolute maximum ratings:
+
+<ul>
+<li>
+Basically how would you break this
+
+<li>
+You should be fine to run <span id="CPSC 4820-8&#47;23&#47;16-8&#47;24&#47;16-Right"></span><strong id="Right">Right</strong> at this threshold
+
+<li>
+Temperature is important for soldering the device:
+
+<ul>
+<li>
+Don't sit with a solder on the device
+
+</ul>
+</ul>
+</ul>
+<li>
+DigiKey:
+
+<ul>
+<li>
+<a href="http:&#47;&#47;www.digikey.com">http://www.digikey.com</a>
+
+<li>
+Can find the same chips but packeged differently:
+
+<ul>
+<li>
+May mean the prices are lower
+
+<li>
+Check the minimum quantity for the device
+
+</ul>
+<li>
+Look around on sparkfun and get an idea of what you may want then use digikey
+
+</ul>
+</ul>
+
+<div id="CPSC 4820-8&#47;23&#47;16-8&#47;26&#47;16"><h3 id="8&#47;26&#47;16">8/26/16</h3></div>
+<ul>
+<li>
+Digital pins:
+
+<ul>
+<li>
+Can be set to either high or low:
+
+<ul>
+<li>
+In this case you get either 3.3v volts or 0v
+
+</ul>
+<li>
+Digital write:
+
+<ul>
+<li>
+Makes the pin havie wither high or low
+
+</ul>
+<li>
+Digital read:
+
+<ul>
+<li>
+Reads the voltage of the pin
+
+</ul>
+<li>
+All digital pins can do analogue write
+
+</ul>
+<li>
+Analogue:
+
+<ul>
+<li>
+This does not allow you to specify an arbitrary value for voltage
+
+<li>
+Analogue, changes this by mapping to PWC:
+
+<ul>
+<li>
+Lets say you wanted 50% it would be high for half and low for the other half while switching really quickly
+
+</ul>
+</ul>
+<li>
+Pins have modes:
+
+<ul>
+<li>
+Input:
+
+<li>
+Output
+
+<li>
+You need to ensure your mode is correct for what you are trying to do
+
+</ul>
+</ul>
+
+<div id="CPSC 4820-8&#47;23&#47;16-8&#47;29&#47;16"><h3 id="8&#47;29&#47;16">8/29/16</h3></div>
+<ul>
+<li>
+How do you get the device to stop doing what its doing
+
+<ul>
+<li>
+Hold the reset button
+
+</ul>
+<li>
+Language reference sheet
+
+<ul>
+<li>
+<a href="http:&#47;&#47;www.energia.nu&#47;Reference_index.html">http://www.energia.nu/Reference_index.html</a>
+
+</ul>
+<li>
+You can use double and floats on these devices but they don't have fpu (Floating Point Units):
+
+<li>
+Language overview:
+
+<ul>
+<li>
+Interrupts
+
+<ul>
+<li>
+Attach intterupts says if a particular pin does something then interrupts:
+
+<ul>
+<li>
+Example:
+
+<ul>
+<li>
+Everytime this button is push then I will now blink once then return back to the loop I was in before then
+
+</ul>
+</ul>
+<li>
+Interrupts will get buffered... to a point but if you hold the interrupt context long enough then you cannot get back out
+
+<ul>
+<li>
+Example:
+
+<ul>
+<li>
+An infinite loop in an ISR will result in a stuck chunk of code
+
+</ul>
+</ul>
+</ul>
+<li>
+INLINE:
+
+<ul>
+<li>
+This tells the compiler to not stick your function into a framestack which will allow your code to respond faster:
+
+<li>
+This will blow up your code though (Memory issue)
+
+</ul>
+</ul>
+</ul>
+<div id="CPSC 4820-8&#47;23&#47;16-9&#47;7&#47;16"><h3 id="9&#47;7&#47;16">9/7/16</h3></div>
+<ul>
+<li>
+SCK - Keeps everything syncronized
+
+<li>
+CSn - Use this pin to select the chip you want to talk to
+
+<ul>
+<li>
+Uses active low, this means that it will be "on" when the voltage is low
+
+</ul>
+<li>
+GDO2 - Ways to send an interrupt 
+
+<li>
+GDO0 - Ways to send an interrupt
+
+<li>
+C1101 API:
+
+<ul>
+<li>
+void RX();
+
+<ul>
+<li>
+sits and waits for messages, higher energy consumption
+
+</ul>
+<li>
+void Sleep();
+
+<ul>
+<li>
+Sleeps, and consumes very very little energy
+
+</ul>
+<li>
+void WakeUp();
+
+<ul>
+<li>
+Wakes up from sleep
+
+</ul>
+<li>
+void SendData(uint8_t *txBuffer, uint8_t size);
+
+<ul>
+<li>
+*NoWait
+
+<li>
+Sends data has a no wait version which will send data now and will not ensure you are not overwhelming the chip
+
+</ul>
+<li>
+Rssi():
+
+<ul>
+<li>
+maybe not very good for ranging tachnique
+
+</ul>
+</ul>
+</ul>
+<div id="CPSC 4820-8&#47;23&#47;16-9&#47;9&#47;16"><h3 id="9&#47;9&#47;16">9/9/16</h3></div>
+<ul>
+<li>
+Debugging:
+
+<ul>
+<li>
+What is the difference between embedded and standard software dev
+
+<ul>
+<li>
+Visibility on what is happening
+
+</ul>
+<li>
+Tools and steps:
+
+<ul>
+<li>
+Use a multimeter to check if you have grounding issues
+
+<li>
+Use a multimeter to check if you have power going to vcc and grnd
+
+<li>
+Connect the multimeter to gpio pin and toggle it when you get to certain points of your code (kinda like printf)
+
+</ul>
+<li>
+Ints on this board are 2 bytes or 16 bits
+
+<li>
+Serial.print() is capable of slowing down the board data
+
+<li>
+Don't use malloc because it can cause bugs that don't always show up
+
+<li>
+
+
+</ul>
+</ul>
+
+<div id="CPSC 4820-8&#47;23&#47;16-9&#47;28&#47;16"><h3 id="9&#47;28&#47;16">9/28/16</h3></div>
+<ul>
+<li>
+Finite Statemachine
+
+<li>
+
+</ul>
+
+</body>
+</html>

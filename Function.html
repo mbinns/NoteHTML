@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Function</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<div id="Defining"><h1 id="Defining">Defining</h1></div>
+<ul>
+<li>
+the def keyword is used to define a function in python
+
+<li>
+Example:
+
+<ul>
+<li>
+
+<pre python>
+# function with no args or return
+def function():
+    print("This is a function")
+function()
+</pre>
+
+</ul>
+</ul>
+
+<div id="Returning"><h1 id="Returning">Returning</h1></div>
+<ul>
+<li>
+Functions can return a value in python, this does not need to be identified in the definition unlike C
+
+<li>
+You can return multiple values, it puts the values into a list object
+
+<li>
+Example:
+
+<ul>
+<li>
+
+<pre python>
+# single value return
+def returning():
+    return "Hello mack!"
+    
+result = returning()
+print(result)
+
+# multi result return
+def multival():
+    return "this result", 2
+</pre>
+
+</ul>
+</ul>
+
+<div id="Arguments"><h1 id="Arguments">Arguments</h1></div>
+<ul>
+<li>
+Arguments are specified in the () of the function
+
+<li>
+there can be as many parameters as you want to pass:
+
+<ul>
+<li>
+arguments are pass by value by default.
+
+</ul>
+<li>
+Defaults:
+
+<ul>
+<li>
+These are the default values if they are not specified
+
+<li>
+Default values should be put last
+
+</ul>
+<li>
+Example:
+
+<ul>
+<li>
+
+<pre python>
+# Single argument
+def arguments(a):
+    print(a)
+
+arguments("Hello mack!")
+
+# multi args
+def arguments(a,b):
+    print(a)
+    print(b)
+    
+arguments("hello", " mack!")
+
+# default values of the function
+def defaults(a, b=4,c=5):
+    return a+b+c
+    
+result = defaults(5)
+</pre>
+
+</ul>
+</ul>
+
+<div id="Scope"><h1 id="Scope">Scope</h1></div>
+<ul>
+<li>
+The scope of an argument in a function is only with in the function unless passed by reference
+
+</ul>
+
+<div id="Nested functions"><h1 id="Nested functions">Nested functions</h1></div>
+<ul>
+<li>
+Functions can be nested inside of another function
+
+<li>
+The outer function can see inside of the function contained within it
+
+<ul>
+<li>
+The inner function can only see the stuff inside of it, not the outer functions stuff
+
+</ul>
+<li>
+You can define multiple nested function values by adding extra () to the function call to the outer
+
+<li>
+Example:
+
+<ul>
+<li>
+
+<pre python>
+# one def
+def outer(a):
+    def nested(b):
+        return b * a
+    a = nested(a)
+    return a
+print(outer(4))
+
+# two def 4 is outer 2 is inner
+def outer(a):
+    def nested(b):
+        return b * a
+    a = nested(a)
+    return a
+print(outer(4)(2))
+</pre>
+
+</ul>
+</ul>
+
+<div id="Recursion"><h1 id="Recursion">Recursion</h1></div>
+<ul>
+<li>
+A function calling its self
+
+<li>
+You need a base case for a recursive call
+
+<li>
+Examples:
+
+<ul>
+<li>
+
+<pre python>
+# recursion, solving a factorial example
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return(n * factorial(n-1))
+print(factorial(5)) 
+</pre>
+
+</ul>
+</ul>
+
+<div id="Lambda"><h1 id="Lambda">Lambda</h1></div>
+<ul>
+<li>
+Lambda is a nameless function which is stored in a variable, these are used for inline functions.
+
+<li>
+Lambda functions can also be nested like normal functions
+
+<li>
+Example:
+
+<ul>
+<li>
+
+<pre python>
+f = Lambda x,y: x + y
+print(f(2,3))
+</pre>
+
+</ul>
+</ul>
+
+</body>
+</html>

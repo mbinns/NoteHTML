@@ -1,0 +1,2316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>CPSC 3600</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<div id="CPSC 3600"><h1 id="CPSC 3600">CPSC 3600</h1></div>
+<div id="CPSC 3600-Syllabus"><h2 id="Syllabus">Syllabus</h2></div>
+<ul>
+<li>
+lsitana@clemson.edu
+
+<ul>
+<li>
+Use CPSC 3600 in subject
+
+</ul>
+<li>
+Office Hours:
+
+<ul>
+<li>
+McAdams Hall 221
+
+<li>
+MW: 9:30 - 10am
+
+<li>
+Send email a day before when coming to see her
+
+</ul>
+<li>
+Textbook:
+
+<ul>
+<li>
+ Computer networks and internets (6th edition ) Douglas E. Comer
+
+<li>
+ Shouldn't need it
+
+<li>
+Lecture materials will be available
+
+<ul>
+<li>
+ <a href="https:&#47;&#47;people.cs.clemson.edu&#47;~lsitana&#47;CPSC3600-002&#47;CPSC3600.html">https://people.cs.clemson.edu/~lsitana/CPSC3600-002/CPSC3600.html</a>
+
+</ul>
+</ul>
+</ul>
+
+<ul>
+<li>
+Presentation!
+
+<ul>
+<li>
+Group of 4 students
+
+</ul>
+<li>
+Monday and Wednesday Lectures/Presentations
+
+<li>
+Friday Programming activities/quizzes/exams
+
+</ul>
+
+<div id="CPSC 3600-8&#47;19&#47;16"><h2 id="8&#47;19&#47;16">8/19/16</h2></div>
+<ul>
+<li>
+Group 15:
+
+<ul>
+<li>
+Topic - Support Protocols and Technologies Pt.2
+
+</ul>
+<li>
+Computer Networks vs Distributed Systems:
+
+<ul>
+<li>
+Computer networks:
+
+<ul>
+<li>
+Interconnected collection of computer ables to exchange info
+
+<li>
+Usually requires to explicitly login and explicitly do tasks
+
+</ul>
+<li>
+Distributed systems:
+
+<ul>
+<li>
+Multiple autonomous computers in a network and is transparent to the user
+
+<li>
+The operating system automatically allocates, jobs, tasks, resources without explicite instruction
+
+</ul>
+</ul>
+<li>
+Motivation for computer network apps:
+
+<ul>
+<li>
+Business networks:
+
+<ul>
+<li>
+Resource sharing:
+
+<ul>
+<li>
+Can share files 
+
+<li>
+Data can be transfered quickly
+
+<li>
+Things can work reguardless of physical location
+
+</ul>
+<li>
+High reliablility:
+
+<ul>
+<li>
+Data can be duplicated across multiple devices providing redundancy
+
+</ul>
+<li>
+Economically sound:
+
+<ul>
+<li>
+Networked micro computers using the client server model offer better price performance ratio than mainframes
+
+</ul>
+</ul>
+<li>
+Personal networks:
+
+<ul>
+<li>
+Access to remote information:
+
+<ul>
+<li>
+Financial info
+
+<li>
+database access using peer to peer model:
+
+<ul>
+<li>
+No central server usually hosted on a users computer
+
+<li>
+Torrents (P2P)
+
+</ul>
+</ul>
+<li>
+Person to person communication:
+
+<ul>
+<li>
+Email
+
+<li>
+Voice
+
+<li>
+Video
+
+</ul>
+<li>
+Interactive entertainment:
+
+<ul>
+<li>
+Video on demand
+
+<li>
+Interactive tv
+
+<li>
+Networked games
+
+</ul>
+</ul>
+</ul>
+<li>
+Classification of computer networks:
+
+<ul>
+<li>
+Broadcast:
+
+<ul>
+<li>
+Uses a single comm channel used by all computers on the network
+
+<li>
+Short messages (Packets) are sent by any machine and recieved by all computers
+
+<li>
+An address is used in the message to select the target (IP)
+
+<li>
+Most localized networks are broadcast
+
+</ul>
+<li>
+Point to point:
+
+<ul>
+<li>
+Consist of many connections between individual pairs of machines
+
+<li>
+A packet may have to visit one or more intermediate machines before reaching its target:
+
+<ul>
+<li>
+A Router is an intermediate node in this type of network
+
+</ul>
+<li>
+Routing algorithms play an important role
+
+<li>
+Most large area networks use this model
+
+</ul>
+<li>
+Based on scale:
+
+<ul>
+<li>
+PAN Personal area networs (Smallest scale):
+
+<ul>
+<li>
+Devices communicate over the range of a person 
+
+<li>
+Bluetooth is a good example of this
+
+</ul>
+<li>
+LAN Local area Network:
+
+<ul>
+<li>
+Rooms, buildings, Sites
+
+<li>
+Only one machine can transmit successfully unless switches are used
+
+</ul>
+<li>
+MAN Metropolitan area Networks:
+
+<ul>
+<li>
+Whole city range
+
+</ul>
+<li>
+WAN Wide area Networks:
+
+<ul>
+<li>
+Consited of hosts (machines to run applications)
+
+<li>
+Consists of multiple LANS using communication subnets to interact with one another
+
+<ul>
+<li>
+Routers act as the intermediate nodes bewtween the networks
+
+</ul>
+</ul>
+<li>
+Global networks (The internet):
+
+<ul>
+<li>
+Internetworks are teh netwokrs with different software and hardware interconnected as one network
+
+<li>
+Gateways are computers used to translate between all computers
+
+<li>
+ARPANET is the first implementation of this:
+
+<ul>
+<li>
+Expanded by the NSF (several thousnd)
+
+</ul>
+</ul>
+<li>
+TCP/IP is the current protocol for comm
+
+</ul>
+</ul>
+</ul>
+
+<div id="CPSC 3600-8&#47;22&#47;16"><h2 id="8&#47;22&#47;16">8/22/16</h2></div>
+<ul>
+<li>
+Protocol Hierarchy:
+
+<ul>
+<li>
+To reduce design complecity, most networks are orgainized in layers
+
+<li>
+Layers may be implemented in software or hardware depending on function
+
+<li>
+Layers can communicate with layers on other machines on the network using an agreed upon protocol
+
+<li>
+Layers trickle down from the higher to lower numbers then back up on the reciving machine
+
+</ul>
+<li>
+Protocol:
+
+<ul>
+<li>
+An agreement between layers on how the communication is to proceede
+
+<li>
+The steps that need to take place on how the computer will communicate
+
+<li>
+Similar to speaking the same language as someone
+
+</ul>
+<li>
+Layers:
+
+<ul>
+<li>
+Lower layers specify how the bits are sent
+
+<li>
+Higher levels (Application level) contain information an application can use
+
+<li>
+Protocols on a per layer basis allow for different configurations to communicate with one anaother
+
+<li>
+No data is transferred from layer n on any two machines data and control is passed to the layer below
+
+<li>
+Protocol information is appended as a header on the packet
+
+<li>
+After layer 1 the phyisical medium where the actual communication occurs
+
+</ul>
+<li>
+Information flow in a network:
+
+<ul>
+<li>
+After every layer the next layers header is appended on the front
+<pre>
+    LNH = Layer number header (Appended at each descending layer)
+    Layer 5 [Message]
+    Layer 4 [L4H][Message]
+    Layer 3 [L3H][L4H][Message]
+    Layer 2 [L2H][L3H][L4H][Message]
+    Layer 1 [L1H][L2H][L3H][L4H][Message]
+    Physical medium
+</pre>
+
+</ul>
+</ul>
+
+<ul>
+<li>
+Design issues for layers:
+
+<ul>
+<li>
+Robustness:
+
+<ul>
+<li>
+Error detection: Retransimission is needed when information is received incorrectly
+
+<li>
+Error correction: Message is recovered from incorrect bits
+
+<li>
+Routing: Automatically fin an alternative route from source to desitination
+
+</ul>
+<li>
+Scalability:
+
+<ul>
+<li>
+Protocol layering: divides the overall problem and hides implementation details
+
+<li>
+Addressing: Naming and identifying senders and receivers
+
+</ul>
+<li>
+Resource allocation:
+
+<ul>
+<li>
+Statisitcal multiplexing: allocating bandwidth dynamically according to the short term needs of hosts
+
+<li>
+Flow control: feedback from the receiver to the sender is used to overcome the fast sender slow receiver problem:
+
+<ul>
+<li>
+If the sender is on fiber and the receiver is on DSL the sender can send many more packets than the receiver can get
+
+<li>
+So the ACK packet is inplace to let the sender know what packets the receiver has gotten
+
+</ul>
+<li>
+Congestion: Too many computer on a network at one time
+
+<li>
+Real-time: Timeliness
+
+<li>
+Quality of service: High throughput, low latency:
+
+<ul>
+<li>
+Can send lots of data very quickly
+
+</ul>
+</ul>
+<li>
+Security:
+
+<ul>
+<li>
+Confidentiality: Prevents eavesdropping
+
+<li>
+Authentication: Prevents someone from impersonating someone else
+
+<li>
+Integrety: Make sure the data does not change from point 'A' to point 'B'
+
+</ul>
+</ul>
+<li>
+Network layer services:
+
+<ul>
+<li>
+Connection orienteed service:
+
+<ul>
+<li>
+The data is expected to be recived in the order it was sent
+
+<li>
+TCP
+
+</ul>
+<li>
+Connetionless service:
+
+<ul>
+<li>
+The messages are self contained and are routed independent in the order they were sent
+
+<li>
+Therefore messages can be recived out of order
+<pre>
+First 3 are connection oriented
+The rest are connectionless
+
+| Services                | Example              |
+|-------------------------|----------------------|
+| Reliable message stream | Sequence of pages    |
+| Reliable byte stream    | Movie download       |
+| Unreliable connection   | VOIP                 |
+| Unreliable datagram     | Electronic junk mail |
+| Acknoledged datagram    | Text messaging       |
+| Request reply           | Database query       |
+</pre>
+
+</ul>
+</ul>
+<li>
+OSI 7 layer network model:
+
+<ul>
+<li>
+<a href="https:&#47;&#47;en.wikipedia.org&#47;wiki&#47;OSI_mode:&#47;&#47;en.wikipedia.org&#47;wiki&#47;OSI_model">https://en.wikipedia.org/wiki/OSI_mode://en.wikipedia.org/wiki/OSI_model</a>
+
+<li>
+This is the first step to an international standard of network communication 
+
+<li>
+Physical layer:
+
+<ul>
+<li>
+This layer is concered with tranmission of bits
+
+<li>
+Some issues handeled are:
+
+<ul>
+<li>
+How many volts for 0 and how many volts for 1
+
+<li>
+number of bits persecond
+
+<li>
+Whether it is a one-way or two-way communication
+
+</ul>
+<li>
+Serial ports are a good example of this
+
+</ul>
+<li>
+Data link layer:
+
+<ul>
+<li>
+This layer groups bits into frames (Packets) and ensures correct delivery free of errors
+
+<li>
+It adds some bits at the beginning and end of each frame to be used as a check sum:
+
+<ul>
+<li>
+The receiver makes sure the checksum is correct and if it is not correct will request a retransmmission
+
+</ul>
+<li>
+This layer has two sublayers:
+
+<ul>
+<li>
+Logical link contol:
+
+<ul>
+<li>
+LLC defines how data is transferred over network medium and connects to higher layers
+
+</ul>
+<li>
+Medium access control:
+
+<ul>
+<li>
+MAC defines who can use the network medium when multiple computers are trying to access it
+
+</ul>
+<li>
+Token passing - Kinda like holding the speaking stick, whoever holds the token can transmit data
+
+<li>
+Carrier sense multiple access with collision avidance (CSMA/CD) for ethernet:
+<pre>
+
+
+    B           D
+                    
+A       C           E
+
+If both A and C send something to B then there will be a collision and only one can send at a time
+But if C sends to D and A sends to B then they can both send at the same time imagin drawing lines between the points and if theyy intersect then it would be a collision
+</pre>
+
+</ul>
+</ul>
+</ul>
+</ul>
+
+<div id="CPSC 3600-8&#47;24&#47;16"><h2 id="8&#47;24&#47;16">8/24/16</h2></div>
+<ul>
+<li>
+OSI 7 layer network model:
+
+<ul>
+<li>
+Network layer:
+
+<ul>
+<li>
+This layer is concerend with the transmission of packets and how they are routed from source to destination
+
+<li>
+Path finding algorithms are used here (Shortest path without conflicts):
+
+<ul>
+<li>
+If congestion is present on one host that is on the shortest path, the next best path  will be used
+
+</ul>
+<li>
+Congestion occurs when too many packets are present at the same time:
+
+<ul>
+<li>
+If many computers route through one host and the host cannot handle the load it is a bottleneck on the network
+
+</ul>
+<li>
+In broadcast networks routing is easy (It goes to everyone) so this layer is not very important:
+
+<ul>
+<li>
+Sometimes it doesn't even exist
+
+</ul>
+<li>
+In larger networks this layer is very complicated (The internet)
+
+</ul>
+<li>
+Transport layer:
+
+<ul>
+<li>
+Deals with lots of messages and must be reliable
+
+<li>
+Breaks messages into small packets of data and applies a sequence to them:
+
+<ul>
+<li>
+The syn/ack number in TCP threeway handshake
+
+</ul>
+<li>
+Examples are tranmission control protocol (TCP) and user datagram protocol (UDP):
+
+</ul>
+<li>
+Session layer:
+
+<ul>
+<li>
+Few applications use this layer, more enhanced verstion of transport
+
+<li>
+Use cases:
+
+<ul>
+<li>
+Dialog control:
+
+<ul>
+<li>
+Whos turn it is to send packets
+
+</ul>
+<li>
+Token management:
+
+<ul>
+<li>
+To keep track of identity
+
+</ul>
+<li>
+Synchronization:
+
+<ul>
+<li>
+Checkpoints for long transmissions
+
+</ul>
+</ul>
+<li>
+Many network implementations don't support this layer
+
+</ul>
+<li>
+Presentation layer:
+
+<ul>
+<li>
+Few applications use this layer
+
+<li>
+Use cases:
+
+<ul>
+<li>
+Syntax and sematincs of info transmitted
+
+</ul>
+<li>
+Allows machines with different represenations to communicate
+
+</ul>
+<li>
+Application layer:
+
+<ul>
+<li>
+This is a collection of protocols for high level applications
+
+<li>
+VOIP, web browsing, ssh
+
+<li>
+Protocols include:
+
+<ul>
+<li>
+HTTP/HTTPS/FTP/Telnet
+
+</ul>
+</ul>
+</ul>
+<li>
+Data transmission:
+
+<ul>
+<li>
+Sender works from the top down (With the highest level layer needed)
+
+<li>
+Reciver works from the bottom up (From the physical layer up)
+
+</ul>
+<li>
+TCP/IP reference model:
+
+<ul>
+<li>
+Used in the internet
+
+<li>
+Only 5 layers
+
+<ul>
+<li>
+Application 5:
+
+<ul>
+<li>
+Specifies format of the data that is usful for an application 
+
+</ul>
+<li>
+Transport 4:
+
+<ul>
+<li>
+Provides communication from an application on one computer to an app on another
+
+<li>
+Controlls max rate of data flow
+
+<li>
+Avoids congestion
+
+<li>
+Keeps order of packets
+
+<li>
+Main differences between OSI model and TCP:
+
+<ul>
+<li>
+They are typically the same in both model 
+
+</ul>
+</ul>
+<li>
+Internet 3:
+
+<ul>
+<li>
+Similar to the network layer in OSI
+
+<li>
+Communication between two computers across the internet, the internet addressing structure of the packets
+
+</ul>
+<li>
+Network interface 2:
+
+<ul>
+<li>
+This is the data link layer in OSI
+
+<li>
+MAC layer specifies details about comm over a singal network address and max packet size
+
+</ul>
+<li>
+Physical 1:
+
+<ul>
+<li>
+Same as the OSI model
+
+</ul>
+</ul>
+</ul>
+<li>
+Client server models:
+
+<ul>
+<li>
+Client and servers are not refering to the physical computer but the types of applications on them
+
+<ul>
+<li>
+Client:
+
+<ul>
+<li>
+Program initiates communication
+
+</ul>
+<li>
+Server:
+
+<ul>
+<li>
+Waits passivly for and then responds to messages
+
+</ul>
+</ul>
+<li>
+A computer can be both client and server at the same time
+
+<li>
+Example: You want to download a movie from a computer, you send a request (Making you the client) and the computer on the internet sends you a response in the form of a movie (The server) but you host a website on your computer (Making you the server) and someone wants to go to your site so they send a request to see it to your computer (Making them the client). This can all happen at the same time
+
+<li>
+Model of interaction:
+<table>
+<tr>
+<th>
+Server
+</th>
+<th>
+Client
+</th>
+</tr>
+<tr>
+<td>
+Starts first
+</td>
+<td>
+Starts second
+</td>
+</tr>
+<tr>
+<td>
+Does not need to know which client will contact it
+</td>
+<td>
+Must know what server to contact
+</td>
+</tr>
+<tr>
+<td>
+Waits passivly for contact
+</td>
+<td>
+Initiates contact
+</td>
+</tr>
+<tr>
+<td>
+Communication with a client starts by both sending And reciving data
+</td>
+<td>
+Communicates by sending and reciving data
+</td>
+</tr>
+<tr>
+<td>
+Stays running after transaction
+</td>
+<td>
+May terminate after transaction
+</td>
+</tr>
+</table>
+
+<li>
+How does a client identify a server:
+
+<ul>
+<li>
+Know the IP of the server (or resolvable dns name)
+
+</ul>
+<li>
+How does a client know what to application to talk to on the server:
+
+<ul>
+<li>
+A port number is used for a channel of communication for a particular application
+
+<li>
+Differnet applications can use the same port number <span id="CPSC 3600-8&#47;24&#47;16-BUT"></span><strong id="BUT">BUT</strong> only one application can run on that port at any given time:
+
+<ul>
+<li>
+Email port number:25 (SMTP)
+
+<li>
+Web server port number:80 (HTTP)
+
+<li>
+Secure web server port number: 443 (HTTPS)
+
+</ul>
+<li>
+Multiple clients can communicate over one port at the sametime
+
+<li>
+<a href="https:&#47;&#47;en.wikipedia.org&#47;wiki&#47;List_of_TCP_and_UDP_port_numbers">https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers</a> 
+
+</ul>
+<li>
+What is a socket:
+
+<ul>
+<li>
+A socket is an abstraction through which and application may send data
+
+</ul>
+</ul>
+<li>
+TCP/UDP:
+
+<ul>
+<li>
+TCP Relaiable and connection oriented:
+
+<ul>
+<li>
+Has error checking and overhead built in to make sure the packet was recived
+
+</ul>
+<li>
+UDP unreliable connectionless:
+
+<ul>
+<li>
+Typically faster than TCP due to less overhead in ensuring packet transmission
+
+</ul>
+</ul>
+</ul>
+
+<div id="CPSC 3600-8&#47;24&#47;16-8&#47;26&#47;16"><h3 id="8&#47;26&#47;16">8/26/16</h3></div>
+<ul>
+<li>
+Sockets:
+
+<ul>
+<li>
+<a href="http:&#47;&#47;www.linuxhowtos.org&#47;C_C++&#47;socket.htm">http://www.linuxhowtos.org/C_C++/socket.htm</a>
+
+<li>
+Chapter 3 from the text
+
+</ul>
+<li>
+Internet application communication paradigms:
+
+<ul>
+<li>
+Two types of paradigms
+<table>
+<tr>
+<th>
+Stream
+</th>
+<th>
+Message
+</th>
+</tr>
+<tr>
+<td>
+Connection orienteed
+</td>
+<td>
+Connectionless
+</td>
+</tr>
+<tr>
+<td>
+1-1 connection
+</td>
+<td>
+Many to many
+</td>
+</tr>
+<tr>
+<td>
+Sequence of individual bytes
+</td>
+<td>
+Sequence of individual messages
+</td>
+</tr>
+<tr>
+<td>
+Arbitrary length transfer
+</td>
+<td>
+Each message limited to 64 bits (Can send less than 64 bits)
+</td>
+</tr>
+<tr>
+<td>
+Used by most applications
+</td>
+<td>
+Used for multimedia application
+</td>
+</tr>
+<tr>
+<td>
+Built on TCP
+</td>
+<td>
+Built on UDP
+</td>
+</tr>
+</table>
+
+<li>
+Stream:
+
+<ul>
+<li>
+Transfers a sequence of bytes
+
+<li>
+connection oriented
+
+<li>
+Bidirectional
+
+<li>
+No meaning attached to data and no boundaries inserted in data:
+
+<ul>
+<li>
+The order of the bytes doesn't care and different applications data can be interwoven
+
+</ul>
+</ul>
+</ul>
+<li>
+TCP:
+
+<ul>
+<li>
+Transmission control protocol:
+
+<ul>
+<li>
+Layer 4 in both the 7 and 5 layer models
+
+</ul>
+<li>
+Guarenteed delivery of uncourrupted packets to the layer above
+
+<ul>
+<li>
+Flow control
+
+<li>
+Error detection 
+
+<li>
+Congestion control
+
+<li>
+Retransmission of lost packets
+
+</ul>
+</ul>
+<li>
+TCP Headers:
+
+<ul>
+<li>
+Contains a checksum:
+
+<ul>
+<li>
+Used to check for errors and data corruption
+
+</ul>
+</ul>
+<li>
+UDP:
+
+<ul>
+<li>
+Connectionless
+
+<li>
+User Datagram Protocol:
+
+<ul>
+<li>
+Faster because less overhead
+
+<li>
+If I am not waiting to see if the data got there I can send the data in a quicker timeframe
+
+</ul>
+<li>
+If the sender sends N bytes in a message, a receiver will find exactly N bytes in the incoming message
+
+<li>
+Paradigms allows unicast, multicast, or broadcast delivery
+
+</ul>
+<li>
+UDP Headers:
+
+<ul>
+<li>
+Also contains a checksum:
+
+<ul>
+<li>
+If the checksum is bad then the packet gets dropped
+
+</ul>
+</ul>
+<li>
+Why use an unreliable protocol:
+
+<ul>
+<li>
+UDP is great for real-time applications
+
+<ul>
+<li>
+VOIP/Audio/Video stream
+
+</ul>
+</ul>
+<li>
+What is a socket:
+
+<ul>
+<li>
+Socket Abstraction: abstracts a mechanism for communication using differnt protocol families
+
+<li>
+Socket API: The interface between application and the TCP/IP set of protocols
+
+</ul>
+<li>
+How to test if a website is up or down:
+
+<ul>
+<li>
+Example:
+<pre>
+ #Open a terminal
+ #Type the following command
+ #This can be host you want/also can resolve ip addresses
+ Ping acm.org 
+</pre>
+
+</ul>
+</ul>
+
+<ul>
+<li>
+Watching your traffic:
+
+<ul>
+<li>
+Example:
+<pre>
+#Open another terminal
+#Type the following command
+#Must be pinging activly to what ever host you want to watch Also can resolve ip addresses
+tcpdump host acm.org
+
+This will show you the hex value of the messages you are seeing
+tcpdump host -x acm.org
+
+12:02:18.753648 IP 64.238.147.121 &gt; 224.192.21.198.tigernet.wifi.dyn.clemson.edu: ICMP echo reply, id 26975, seq 19, length 64
+                             32b
+Memory address -&gt;	0x0000:  4500 0054 17cc 0000 3301 1480 40ee 9379
+                    0x0010:  c615 c0e0 0000 32e9 695f 0013 0a68 c057
+                    0x0020:  0000 0000 cf11 0b00 0000 0000 1011 1213
+                    0x0030:  1415 1617 1819 1a1b 1c1d 1e1f 2021 2223
+                    0x0040:  2425 2627 2829 2a2b 2c2d 2e2f 3031 3233
+                    0x0050:  3435 3637
+</pre>
+
+</ul>
+</ul>
+
+<div id="CPSC 3600-8&#47;24&#47;16-9&#47;2&#47;16"><h3 id="9&#47;2&#47;16">9/2/16</h3></div>
+<ul>
+<li>
+Socket API User Kernel Interaction
+
+<ul>
+<li>
+Sockets sit between layer 4 and 5
+
+</ul>
+<li>
+Most users live in the application layer:
+
+<ul>
+<li>
+All applications send data using the same shared medium
+
+</ul>
+<li>
+Network models
+
+<ul>
+<li>
+Meaning there are buffers between the layers in the network models
+
+<li>
+A buffer overflow can exist inbetween these layers:
+
+</ul>
+<li>
+Protocol and address families:
+
+<ul>
+<li>
+Protocol family represents the protocol type:
+
+<ul>
+<li>
+Many protocols exist (42 in total)
+
+<ul>
+<li>
+Bluetooth
+
+<li>
+TCP
+
+<li>
+IPv4
+
+<li>
+UDP
+
+<li>
+IPv6
+
+</ul>
+</ul>
+<li>
+Sometimes there really is no difference between the protocol family and address family and the seperation is only historical
+
+</ul>
+<li>
+Resource limits:
+
+<ul>
+<li>
+In POSIX everything is treated as a file!
+
+<ul>
+<li>
+Meaning when you open a socket you also need to close that socket
+
+<li>
+Sockets consume resources
+
+<ul>
+<li>
+You should use counters to keep track of how many are open because there is a limit to how many you can have open
+
+</ul>
+</ul>
+</ul>
+<li>
+DNS:
+
+<ul>
+<li>
+IP addresses:
+
+<ul>
+<li>
+Dotted Quad Notation
+
+<li>
+32 bits
+
+<li>
+Each octet is 8bits:
+
+<ul>
+<li>
+Because of this each octet can only have a max of 255 numbers
+
+</ul>
+</ul>
+<li>
+A subnet mask or CIDR notation defines the bondaries of numbers
+
+</ul>
+<li>
+Client server interaction:
+
+<ul>
+<li>
+A server is bound to a socket it is told to keep checking that socket for incomming traffic
+
+<li>
+A Client will send information to an address and port
+
+<li>
+The server will then reply to the client over the same
+
+<li>
+A server can be bound to all networking interfaces so it can catch information coming in on any avenue:
+
+<ul>
+<li>
+If you dont assign a program a port then the kernal would assign a random port. IE you and the client would never know what port and could not communicate
+
+</ul>
+</ul>
+<li>
+Endian's:
+
+<ul>
+<li>
+Big-Endian - MSB (Most signifigant bit) is on the left 
+
+<li>
+Little-Endian - MSB is on the right
+
+<li>
+The htonl() and htons() makes sure your endianess is correct
+
+</ul>
+<li>
+Addresses:
+
+<ul>
+<li>
+Each network interface can only have one IPv4 address
+
+<li>
+Each network interface can have more than one IPv6 address
+
+<li>
+The 127.0.0.1 address is your local computer, sometimes called loopback or localhost
+
+<li>
+How to find your network interface information
+
+<ul>
+<li>
+ip a
+
+<li>
+ifconfig
+
+<li>
+Windows:
+
+<ul>
+<li>
+ipconfig
+
+</ul>
+</ul>
+</ul>
+<li>
+More resources on networking
+
+<ul>
+<li>
+<a href="http:&#47;&#47;www.cucyber.net&#47;presentations&#47;networking&#47;intro&#47;">http://www.cucyber.net/presentations/networking/intro/</a>
+
+</ul>
+</ul>
+
+<div id="CPSC 3600-8&#47;24&#47;16-9&#47;7&#47;16"><h3 id="9&#47;7&#47;16">9/7/16</h3></div>
+<ul>
+<li>
+HOMEWORK DUE Sept 13th:
+
+<ul>
+<li>
+<a href="https:&#47;&#47;docs.google.com&#47;document&#47;d&#47;1IGst5SwwJwnk0618OemDwE8R9fxEn1F5ApmFfstPNk4&#47;preview">https://docs.google.com/document/d/1IGst5SwwJwnk0618OemDwE8R9fxEn1F5ApmFfstPNk4/preview</a>
+
+</ul>
+<li>
+Reliability and Transmission:
+
+<ul>
+<li>
+Errors cannot be eliminated completely
+
+<li>
+Errors can be detected and corrected
+
+<li>
+Error detection adds overhead
+
+<li>
+Examples:
+
+<ul>
+<li>
+One bit error in a bank transfer is signifigant:
+
+<ul>
+<li>
+00001010 (10$)
+
+<li>
+10001010 (138$)
+
+</ul>
+<li>
+One bit error in a picture is non important the overall messge is still the same
+
+</ul>
+</ul>
+<li>
+Types of errors:
+
+<ul>
+<li>
+Single bit error:
+
+<ul>
+<li>
+A single bit in a block of bits is changed and all other bits in the block are unchanged. This often results from very short duration interference
+
+<li>
+Burst error:
+
+<ul>
+<li>
+Multiple bits in a block of data is changed (Long durration interference)
+
+</ul>
+<li>
+Erasure (ambiguity):
+
+<ul>
+<li>
+The signal that arrives at a receiver is ambiguous and cannot correcspond to to either a logical 1 or 0
+
+</ul>
+</ul>
+</ul>
+<li>
+Error handling strategies:
+
+<ul>
+<li>
+Channel coding:
+
+<ul>
+<li>
+Forward error correction:
+
+<ul>
+<li>
+Add additional information to data(checksum) to allow the sender to verify the correctness
+
+</ul>
+<li>
+Automatic Repeat Request (ARQ):
+
+<ul>
+<li>
+Sender and recciver exchange messages (TCP 3-way handshake) where they tell one another that data is getting sent and recived every time.
+
+</ul>
+</ul>
+</ul>
+<li>
+Single Parity Checking:
+
+<ul>
+<li>
+On the sending side an encoder adds an extra bit called a parity bit:
+
+<ul>
+<li>
+The reciver will remove this bit and use it to check all the other bits in a block
+
+</ul>
+<li>
+The Sender and Receiver both must agree to use a type of bit (odd/even):
+
+<ul>
+<li>
+Even: Parity bit of 0
+
+<li>
+Odd: Parity bit of 1
+
+</ul>
+<li>
+Can detect errors but cannot correct for them
+
+<li>
+Also cannot detect errors if an even number of bits was changed (I.E. two bits changing)
+
+<li>
+To use this, you XOR all the bits with the parity bit and check the result
+
+</ul>
+<li>
+Hamming Distance:
+
+<ul>
+<li>
+The number of bits that must be changed to get from the encoding to a codeword
+<pre>
+XOR the bits
+
+001
+010
+---
+011 distance is 2 because two bits had to change
+</pre>
+
+</ul>
+<li>
+Row and column parity (RAC)
+
+<ul>
+<li>
+Both sender and reciver must agree on a length
+
+<li>
+To send data you convert it into a matrix form and add a parity for every row and every column
+
+<li>
+Can only correct 1 bit errors
+<pre>
+DATA in the box parity bits on the border
+--------
+| 1011 | 1
+| 0010 | 1
+| 1010 | 0
+-------- 
+  0011   0
+  
+DATA is put together top down
+101100101010
+</pre>
+
+</ul>
+<li>
+16 bit checksum used in the internet:
+
+<ul>
+<li>
+The algorithm allows a message to be as long as you want/hardware supports
+
+<ul>
+<li>
+The checksum is over the whole messge
+
+<li>
+If the check sum does not = 16 bits it will append zeros
+
+<li>
+Add the values:
+
+<ul>
+<li>
+With the over flow bit you add it to the end
+
+<li>
+Then you flip all the bits
+
+</ul>
+</ul>
+<li>
+The reciver will take the checksum and preform the same operation and if result is 0 then there is not error
+<pre>
+ 0100100001100101 &lt;-- data
+ 0110110001101100 &lt;-- data 
+ 0110111100100001 &lt;-- data
+10010001111110010 &lt;-- Added data with overflow
+-----------------
+0010001111110010
+               1 &lt;-- Add overflow
+-----------------
+0010001111110011
+1101110000001100 &lt;-- flip all bits this is your checksum
+</pre>
+
+</ul>
+<li>
+Cyclic Redundance code:
+
+<ul>
+<li>
+Division of binary numbers under the assumption of no carries
+
+<li>
+Sender and reciver must agree on divisor
+
+<li>
+Can be carried out very fast by hardware
+
+<li>
+Great at detecting errors
+
+<li>
+Arbitrary data length
+
+</ul>
+</ul>
+
+<div id="CPSC 3600-8&#47;24&#47;16-9&#47;16&#47;16&#47;"><h3 id="9&#47;16&#47;16&#47;">9/16/16/</h3></div>
+<ul>
+<li>
+ICMP: Internet control message protocol:
+
+<ul>
+<li>
+IP is unreliable connectionless datagram delivery
+
+<li>
+Message format:
+
+<ul>
+<li>
+Code further identifies message type
+
+<li>
+Checksum reply might have message specific header components
+
+<li>
+Error messages have ICMP header and in the data they include the IP header of the offending packet plus the nesxt 8 bytes
+
+<li>
+Header contains:
+
+<ul>
+<li>
+type/code/checksum:
+
+<ul>
+<li>
+Type = 2bytes
+
+<li>
+Code = 2bytes
+
+<li>
+Checksum = 4bytes
+
+</ul>
+<li>
+data
+
+</ul>
+</ul>
+<li>
+Ping is a type of ICMP:
+
+<ul>
+<li>
+Echo reply/Echo request is involved in a ping
+
+</ul>
+</ul>
+<li>
+Routers forward datagrams one network hop at a time
+
+<li>
+When a datagram  is dropped an error message is sent
+
+<li>
+When a host wants to find some info a control message is sent
+
+<li>
+TCP Dump Demo!
+
+<li>
+ICMP and UDP:
+
+<ul>
+<li>
+Why would that be different, they would be different because the header structure is different. Both of them have 8bytes for the header but when viewed in TCP dump in Hex output the location of data would be different
+
+</ul>
+</ul>
+
+
+<div id="CPSC 3600-QUIZ 3 Study"><h2 id="QUIZ 3 Study">QUIZ 3 Study</h2></div>
+<div id="CPSC 3600-QUIZ 3 Study-Presentation 10"><h3 id="Presentation 10">Presentation 10</h3></div>
+<ul>
+<li>
+Technologies related to extending lan:
+
+<ul>
+<li>
+Bridges
+
+<li>
+Repeaters
+
+</ul>
+<li>
+Distance Limitations and LAN DEsign
+
+<ul>
+<li>
+Hardware for LAN is designed to emit onl a limited amount of energy for transmisisons
+
+<li>
+If the signal extends beyond that distance then it may not be strong enought to be interpereted
+
+</ul>
+<li>
+Fiber Modem Extensions:
+
+<ul>
+<li>
+Extension mechanisms do not increas strength of signals
+
+</ul>
+<li>
+Repeaters:
+
+<ul>
+<li>
+Do not understand the singnal just amplifies it by resending it bit by bit.
+
+<li>
+If the signal is corrupted when it reaches the repeater then it will be corrupted when it leaves
+
+</ul>
+<li>
+Bridges:
+
+<ul>
+<li>
+Listens in promisc mode
+
+<li>
+Forwards any packets from one side to another bridging the two lans
+
+<li>
+this allows lans to behave as one giant lan
+
+<li>
+Use mac addresses to perform filtering, which is when a bridge examines the destination address and doesn't forward it unless necessary
+
+</ul>
+<li>
+Adaptive Bridges:
+
+<ul>
+<li>
+Learn the location of computers automatically
+
+<ul>
+<li>
+Use the source header of the packet to learn location of computers on the network
+
+<li>
+A bridge allows simultanious travel over a segment
+
+<li>
+A computer comminicating with a print will not send information to the ISP
+
+</ul>
+</ul>
+<li>
+Distributed Spanning Tree
+
+<ul>
+<li>
+Prevents endless loops
+
+<li>
+SPT (Spanning Tree Protocol)
+
+<ul>
+<li>
+3 steps:
+
+<ul>
+<li>
+Root election:
+
+<ul>
+<li>
+Bridges multicast their ID and the smallest ID is chosen:
+
+<ul>
+<li>
+16bit priority number
+
+<li>
+48bit MAC address
+
+<li>
+Bridges will compare priority first then use MAC addresses to break a tie
+
+</ul>
+</ul>
+<li>
+Shortest Path computation:
+
+<ul>
+<li>
+Each bridge computes a shortes path to the root which results in the spanning tree
+
+</ul>
+<li>
+Forwarding:
+
+<ul>
+<li>
+An interface that connects to the shortest path is enabled for forwarding packets
+
+<li>
+An interface that does not connect to the shortest oath is blocked
+
+</ul>
+<li>
+Bridges use a multicast address reserved for them:
+
+<ul>
+<li>
+01:80:C2:00:00:00
+
+<ul>
+<li>
+Ethernet address
+
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<li>
+Ethernet/Layer 2 Switching:
+
+<ul>
+<li>
+Devices that forwards packets of data
+
+<li>
+Hubs forward analog signals (bit by bit)
+
+<li>
+Switches forward whole packets
+
+<li>
+Each port on a switch has an intellegent interface containing a CPU, memory, and other hardware required to accept an incoming connection.
+
+<li>
+Switches support parrellism:
+
+<ul>
+<li>
+N/2 connections at the same time
+
+</ul>
+</ul>
+<li>
+VLAN Switches:
+
+<ul>
+<li>
+Virtual Local Area Netowrk Switch is a switch extended by adding virualization:
+
+<ul>
+<li>
+Emulating multiple switches on one piece of harware
+
+</ul>
+<li>
+Shared VLANS on multiple switches are a way to extend the VLAN:
+
+<ul>
+<li>
+IEEE 802.1Q specifices how this happens
+
+<ul>
+<li>
+Shoves a 4byte vlan packeet in the frame header and if the vlan ids match then it gets routed
+
+</ul>
+</ul>
+</ul>
+</ul>
+
+
+<div id="CPSC 3600-QUIZ 3 Study-Lecture 31"><h3 id="Lecture 31">Lecture 31</h3></div>
+<ul>
+<li>
+WAN Technologies and Dynamic:
+
+<ul>
+<li>
+Interconnecting packet switches among sites
+
+<li>
+Cpacity can be planned for and redundancy built in
+
+</ul>
+<li>
+WAN Addressing:
+
+<ul>
+<li>
+Follows hierachical addressing:
+
+<li>
+Conceptual Addresssing:
+
+<ul>
+<li>
+site, computer at site
+
+</ul>
+<li>
+In practice:
+
+<ul>
+<li>
+Packet Switch, Local connection on switch
+
+</ul>
+</ul>
+<li>
+Next hop Forwarding:
+
+<ul>
+<li>
+Forwarding uses only the packet switch part of the address
+
+<li>
+Deleivery uses the other half
+
+<li>
+If a packet reaches a destination switch, then it will beb delivered. If not then it will be sent closer to the desitination switch
+
+</ul>
+<li>
+Forwarding table:
+
+<ul>
+<li>
+To make the computation efficient, packet switches use table lookup
+
+<li>
+Contructing a forwarding table:
+
+<ul>
+<li>
+Two basic approaches
+
+<ul>
+<li>
+Static routing:
+
+<ul>
+<li>
+Entries inserted when system boots and do not chang e
+
+</ul>
+<li>
+Dynamic Routing:
+
+<ul>
+<li>
+Initial entries inserted when system boots routing software continually updates entries
+
+</ul>
+</ul>
+</ul>
+</ul>
+<li>
+Routing software:
+
+<ul>
+<li>
+Computes shortest path, and updates the forwarding table
+
+<li>
+Default routes, allows a single entry in a forwaring table to replace a long list of entries
+
+</ul>
+<li>
+Dynamic Routing:
+
+<ul>
+<li>
+Consitant optimal routes: automatic failure corrections
+
+<li>
+Two basic algorithms:
+
+<ul>
+<li>
+LSR
+
+<li>
+DVR
+
+</ul>
+</ul>
+<li>
+LSR:
+
+<ul>
+<li>
+Each node:
+
+<ul>
+<li>
+Sends link status across network
+
+<li>
+Computes shortest paths independently
+
+<li>
+Does not rely on computation performed by others
+
+</ul>
+<li>
+Test connections between node periodiclly:
+
+<ul>
+<li>
+Tests connection between them
+
+<li>
+Says the link between X and Y is either up or down
+
+</ul>
+<li>
+Each node:
+
+<ul>
+<li>
+Collects incoming broadcast messages and creates a graph
+
+<li>
+Uses dijkstra's SPF
+
+</ul>
+</ul>
+<li>
+DVR:
+
+<ul>
+<li>
+Distance Vector Routing
+
+<li>
+Bellman Ford routing
+
+<li>
+Unlike LSR, DVR arranges for a packet swith to send a complete list of destination and current cost of reaching each
+
+<li>
+Node:
+
+<ul>
+<li>
+Recives information from neighboors
+
+<li>
+Combines information from all neighboors with local information
+
+<li>
+Sends copy of processed information to all neighbors
+
+</ul>
+<li>
+operates like a hive mind
+
+<li>
+Sends route advertisement:
+
+<ul>
+<li>
+I can reach site X, and its distance I Y
+
+</ul>
+</ul>
+<li>
+Measuring the distance of a route:
+
+<ul>
+<li>
+Possible measures:
+
+<ul>
+<li>
+Hops
+
+<li>
+Delays
+
+<li>
+Throughput
+
+<li>
+Economic or administrative cost
+
+</ul>
+</ul>
+<li>
+Routing in Ad Hoc Netoworks:
+
+<ul>
+<li>
+What makes ad hoc networks different from wired networks is that the topology may be changing at all times
+
+</ul>
+<li>
+Ad hoc On-demand distance vector
+
+<ul>
+<li>
+Routes are discoved on demand
+
+<li>
+Saves a lot of reconfiguring if the topology changes
+
+</ul>
+</ul>
+
+
+<div id="CPSC 3600-QUIZ 3 Study-Presentation 11"><h3 id="Presentation 11">Presentation 11</h3></div>
+<ul>
+<li>
+Internet Addressing
+
+<li>
+IP4 V IP6
+
+<li>
+Hour Glass Model:
+
+<ul>
+<li>
+IP is the epicenter of communication
+
+<li>
+Internet comminucation follows an hourglass model.
+<pre>
+APP 1       APP 2       APP 3
+
+             IP
+
+COM 1       COM 2       COM 3
+</pre>
+
+</ul>
+<li>
+Protocols (IP)
+
+<ul>
+<li>
+hid the nitty gritty of the underlying network so that all devices think they are all on one big network
+
+</ul>
+<li>
+IP's are divided into two segments:
+
+<ul>
+<li>
+Prefix:
+
+<ul>
+<li>
+Subnet address
+
+<li>
+255.255.255.0
+
+</ul>
+<li>
+Suffix:
+
+<ul>
+<li>
+0.0.0.255
+
+</ul>
+</ul>
+<li>
+Authorrity for addresses:
+
+<ul>
+<li>
+ICANN old authority
+
+<li>
+Registrars are now responsible
+
+<li>
+Each geographic location is assigned a registrar
+
+<li>
+Registrars make blocks avaiable to ISPs
+
+</ul>
+<li>
+Classes addressing
+
+<ul>
+<li>
+Like subnet, very similar
+
+<li>
+Routers use the condition N == (D&amp;M) where N is the network prefix and D is the destination address and M is the Mask
+
+<li>
+Network prefix with the value
+
+<li>
+10000000 00001010 00000000 00000000
+
+</ul>
+</ul>
+
+
+<div id="CPSC 3600-QUIZ 3 Study-Presentation 12"><h3 id="Presentation 12">Presentation 12</h3></div>
+<ul>
+<li>
+CIDR Notation Uses with IPv4:
+
+<ul>
+<li>
+Classless inter-domain routing (CIDR)
+
+<li>
+CIDR starts at 28 (least) and goes to 13 most:
+
+<ul>
+<li>
+28 = 16 hosts on the network
+
+<li>
+13 = 524288 hosts on the network
+
+<li>
+Each step increases double capacity
+
+</ul>
+</ul>
+<li>
+MultiHomed Hosts:
+
+<ul>
+<li>
+If one conneciton fails, the host can still reach the internet through a second connection
+
+<li>
+
+
+</ul>
+</ul>
+
+<p>
+Experimental
+</p>
+
+</body>
+</html>

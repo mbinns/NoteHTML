@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>CPSC 4200</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<div id="CPSC 4200"><h1 id="CPSC 4200">CPSC 4200</h1></div>
+<div id="CPSC 4200-Syllabus"><h2 id="Syllabus">Syllabus</h2></div>
+<ul>
+<li>
+Email:
+
+<ul>
+<li>
+hongxih@clemson.edu
+
+</ul>
+<li>
+Phone:
+
+<ul>
+<li>
+(864)656-2847
+
+</ul>
+<li>
+Office Hours:
+
+<ul>
+<li>
+TR 9 - 11AM
+
+<li>
+Appointment
+
+</ul>
+<li>
+TA/Grader:
+
+<ul>
+<li>
+Nishant Vishwamitra nvishwa@clemson.edu
+
+</ul>
+</ul>
+<div id="CPSC 4200-Syllabus-8&#47;23&#47;16"><h3 id="8&#47;23&#47;16">8/23/16</h3></div>
+<ul>
+<li>
+The HB gary attack
+
+<ul>
+<li>
+Used SQL injection to gain access to the CMS server
+
+<li>
+Then they used a rainbow table to crack the password hashes:
+
+<ul>
+<li>
+A Rainbow table is similar to a hybrid dictionary attack in that it takes a word list and runs through all the words but then it starts changing letters in the word to common substitutions (I.E. a 0 for an o) this table is pregenerated to take some of the computational load off the system while cracking
+
+</ul>
+<li>
+After recovering a password they then used it to log into the webserver and used an escalation exploit to gain administrator access
+
+<li>
+The pivioted to the email server and used the emails to social engineer access to other machines
+
+</ul>
+<li>
+Lessons Learned from HBGary Hack:
+
+<ul>
+<li>
+Use off the shelf software
+
+<li>
+Patching!
+
+<li>
+Store passwords with stronger security
+
+<ul>
+<li>
+They used MD5 with no iterative hashing or salting
+
+</ul>
+<li>
+Force complex passwords
+
+<li>
+Don't reuse passwords
+
+<li>
+Delete sensitive e-mails
+
+<ul>
+<li>
+An email containing the root password for the rootkit.com site
+
+</ul>
+<li>
+Educate against social engineering
+
+</ul>
+</ul>
+
+<div id="CPSC 4200-Syllabus-8&#47;25"><h3 id="8&#47;25">8/25</h3></div>
+<ul>
+<li>
+Defining Security:
+
+<ul>
+<li>
+The security of a system, application, or protocol is always relative to a few things:
+
+<ul>
+<li>
+A set of desired properties
+
+<li>
+An adversary with specific capabilities
+
+</ul>
+</ul>
+<li>
+CIA
+
+<li>
+Confidentiality:
+
+<ul>
+<li>
+Avoidance of unauthorized disclosure of information
+
+<li>
+Protection of data
+
+<li>
+Providing access to those who are allowed to see it
+
+<li>
+Disallowing access to everyone else
+
+<li>
+Tools for confidentiality:
+
+<ul>
+<li>
+Encryption:
+
+<ul>
+<li>
+Public and private keys so what when data is transmitted it is unreadable
+
+</ul>
+<li>
+ACL/Authorization:
+
+<ul>
+<li>
+Rules and policies that limit access to configential info
+
+<li>
+Access can be determinied by many factorsr:
+
+<ul>
+<li>
+What you are:
+
+<ul>
+<li>
+Biometrics
+
+<li>
+Roles
+
+</ul>
+<li>
+What you know:
+
+<ul>
+<li>
+Username
+
+<li>
+Password
+
+</ul>
+<li>
+What you have:
+
+<ul>
+<li>
+Smartcard
+
+<li>
+Keys
+
+</ul>
+</ul>
+</ul>
+<li>
+Physical security:
+
+<ul>
+<li>
+Locks
+
+<li>
+Doors
+
+<li>
+Windowless rooms
+
+<li>
+Sounds dampening
+
+<li>
+Faraday Cages
+
+<li>
+Air gap
+
+</ul>
+</ul>
+</ul>
+<li>
+Integrity:
+
+<ul>
+<li>
+The data is still in its original form and not been altered
+
+<li>
+Tools for intergrity:
+
+<ul>
+<li>
+Backups:
+
+<li>
+Checksum:
+
+<ul>
+<li>
+The computation of a function that maps the contents of a file to a cumerical value, A checksum function depends on the entire contents of a file and is designed in a way that even a small change to the input is likely to result in a different outut from the hash funciton
+
+</ul>
+<li>
+Data corecting codes:
+
+<ul>
+<li>
+Method for storing where small changes can be seen and fixed
+
+</ul>
+</ul>
+</ul>
+<li>
+Availability:
+
+<ul>
+<li>
+The property of data where it is ready to be used in a timely manner
+
+<li>
+Tools for availability:
+
+<ul>
+<li>
+Computational redundancies:
+
+<ul>
+<li>
+Computers and storage devices that serve as fallbacks in the case of failures
+
+</ul>
+<li>
+Physical protections:
+
+<ul>
+<li>
+Infranstructure meant to keep information avaiable even in the even of physical challenges (Natrual disasters)
+
+</ul>
+</ul>
+</ul>
+<li>
+Other security concepts:
+
+<ul>
+<li>
+A.A.A:
+
+<ul>
+<li>
+Authenticity:
+
+<ul>
+<li>
+Ability to determine the assureance properties are genuine
+
+<li>
+Authenticity tools:
+
+<ul>
+<li>
+digital signatures:
+
+<ul>
+<li>
+Systems commit to the authenticity of thier documents with nonrepudiation (no take backsies)
+
+</ul>
+</ul>
+</ul>
+<li>
+Assurance:
+
+<ul>
+<li>
+Refers to how trust is provided and managed in computer systems
+
+<li>
+Trust management:
+
+<ul>
+<li>
+Policies:
+
+<ul>
+<li>
+Behavioral expectations that people or systems must follow
+
+</ul>
+<li>
+Permissions:
+
+<ul>
+<li>
+Describe behaviors allowed by agents that interact with a system
+
+</ul>
+<li>
+Protections:
+
+<ul>
+<li>
+mechanisms put in place to enforce permissions and policies
+
+</ul>
+</ul>
+</ul>
+<li>
+Anonymity:
+
+<ul>
+<li>
+Certian records  cannot be attributed to any individual
+
+<li>
+Toos for anonymity:
+
+<ul>
+<li>
+Aggregation of data:
+
+<ul>
+<li>
+Mixing of all data so it is harder to pin down on one user
+
+</ul>
+<li>
+Mixing:
+
+<ul>
+<li>
+Interwinning of transactions, information, or communication in a way that cannot be traced to any individual
+
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<li>
+Threats and Attacks:
+
+<ul>
+<li>
+Eavesdripping:
+
+<ul>
+<li>
+Intercepting of information on its way to its destination
+
+<li>
+Packet sniffing
+
+<li>
+An attack on confidentiality
+
+</ul>
+<li>
+Alteration:
+
+<ul>
+<li>
+MITM Attacks
+
+<ul>
+<li>
+Where an attacker has a network stream sent to them where it can be copied, modified, and then retransmitted
+
+</ul>
+<li>
+Attack on Confidentiality, Integrity
+
+</ul>
+<li>
+DOS:
+
+<ul>
+<li>
+Itteruption in a service by sending lots of traffic/data to a server
+
+<li>
+Attack on avaibality
+
+</ul>
+<li>
+Masquerading(Impersinating):
+
+<ul>
+<li>
+Social engineering attacks like phishing and spoofing 
+
+<li>
+An attack on authenticity/confidentiality/anonymity
+
+</ul>
+<li>
+Repudiation:
+
+<ul>
+<li>
+Denail of a commitment or data receipt
+
+<li>
+Attempting to back out in the middle of a protocol that requires the differnet parties to provide receipts ack that they have gotten data
+
+<li>
+Attack on assurance
+
+</ul>
+<li>
+Correlation and traceback:
+
+<ul>
+<li>
+The integration of multiple data sources and information flows to figureout the source of information
+
+<li>
+An attack on anonymity
+
+</ul>
+</ul>
+<li>
+Authentication v Authorization:
+
+<ul>
+<li>
+Authentication:
+
+<ul>
+<li>
+Who or what can access a system
+
+<li>
+User name and password
+
+</ul>
+<li>
+Authorization:
+
+<ul>
+<li>
+Are you allowed to do that
+
+<li>
+ACP (Access control policies)
+
+<li>
+Restrictions on actions of authenticated users
+
+</ul>
+</ul>
+</ul>
+<div id="CPSC 4200-Syllabus-9&#47;6&#47;16"><h3 id="9&#47;6&#47;16">9/6/16</h3></div>
+<ul>
+<li>
+Authenticating someone to a computer:
+
+<ul>
+<li>
+Who they are
+
+<li>
+What they know
+
+<li>
+What they have
+
+</ul>
+<li>
+What they have:
+
+<ul>
+<li>
+RFID chips:
+
+<ul>
+<li>
+Trasmits identification over radio waves
+
+<li>
+Must be used with a seperate reader writer
+
+<li>
+Many RFID's are passive and do not need a battery
+
+<li>
+Range varies from several cm's to meters
+
+</ul>
+</ul>
+<li>
+Who they are:
+
+<ul>
+<li>
+Biometrics:
+
+<ul>
+<li>
+Universal:
+
+<ul>
+<li>
+Applies to almost everyone, meaning most people have the ability to use it
+
+</ul>
+<li>
+Distinguishing:
+
+<ul>
+<li>
+Distinguish with certainty
+
+</ul>
+<li>
+Permanent:
+
+<ul>
+<li>
+Physical characteristics being measured never changes
+
+<li>
+We only need it to last a really long time
+
+</ul>
+<li>
+Collectable:
+
+<ul>
+<li>
+Easy to collect required data if people are cooperative 
+
+</ul>
+<li>
+Types:
+
+<ul>
+<li>
+Fingerprints:
+
+<ul>
+<li>
+Most people have these
+
+<li>
+Last a long time
+
+<li>
+Easy to grab
+
+<li>
+Relativly unique
+
+</ul>
+<li>
+Retnal/iris scans:
+
+<ul>
+<li>
+Most people have these
+
+<li>
+Last a long time
+
+<li>
+Easy to grab
+
+<li>
+Relativly unique
+
+</ul>
+<li>
+DNA:
+
+<ul>
+<li>
+This is good and very long lasting
+
+</ul>
+<li>
+Blue ink signature:
+
+<ul>
+<li>
+Hand written signature
+
+</ul>
+<li>
+Voice recognition:
+
+<ul>
+<li>
+Voice changes with age
+
+<li>
+May not be able to speak
+
+</ul>
+<li>
+Face recognition:
+
+<ul>
+<li>
+Changes with age
+
+</ul>
+<li>
+Gait Recognition:
+
+</ul>
+</ul>
+</ul>
+<li>
+Computer forensics:
+
+<ul>
+<li>
+Getting information from electronic medium
+
+<ul>
+<li>
+Usually used for evience
+
+</ul>
+<li>
+Many techniques used by law enforcement gets picked up and used by attackers
+
+<li>
+Paradigm:
+
+<ul>
+<li>
+Identification:
+
+<ul>
+<li>
+Identify specific objects that store important info
+
+</ul>
+<li>
+Collection:
+
+<ul>
+<li>
+Establish a chain of custody and document all steps to prove that the collected data remains intact and unaltered
+
+<li>
+When collecting evidence care must be taken to not change the evidence!
+
+<li>
+Some evidence is more volitile than others:
+
+<ul>
+<li>
+RAM&gt;SWAP&gt;DISK(hdd/ssd)&gt;CD/DVD's
+
+<li>
+The idea is to capture the most volitile evidence first
+
+</ul>
+</ul>
+<li>
+Analysis and eval
+
+<ul>
+<li>
+Know where evidence can be found:
+
+<ul>
+<li>
+Undeleted files
+
+<li>
+Deleted files
+
+<li>
+Windows registry
+
+<li>
+Print spool files
+
+<li>
+Hibernation files
+
+<li>
+Temp files
+
+<li>
+Slack space:
+
+<ul>
+<li>
+Space between the logical end of the data and the actual end of the data which may contain data
+
+</ul>
+<li>
+Swap files
+
+<li>
+Internet history
+
+<li>
+Other partitions
+
+<li>
+Removable media
+
+</ul>
+<li>
+Understand techniques used to hide or destroy data
+
+<li>
+Cope with YUUUGHHH qunatities of data
+
+<li>
+Ignore irrelevant data and target relevant data
+
+<li>
+Understand what circumstances may make evidence unreliable
+
+</ul>
+<li>
+Report:
+
+<ul>
+<li>
+Describe the details of an incident
+
+<li>
+Be understandable
+
+<li>
+Legaly tight
+
+<li>
+be unabigious and unopen to interperetation
+
+</ul>
+<li>
+Anti-Forensics:
+
+<ul>
+<li>
+Attempt to make forensics much more difficult
+
+<li>
+Securely deleting data so that is cannot be restored with forensic methods
+
+<li>
+Prevent the creation of certain data in the first place
+
+<li>
+Cryptography:
+
+<ul>
+<li>
+Just encrypt is
+
+</ul>
+<li>
+Steganography
+
+<li>
+Change file names and extensions
+
+<li>
+Hidden tracks:
+
+<ul>
+<li>
+hidden location of a disk that can hold data
+
+</ul>
+<li>
+Deleted files, things that were not overwritten
+
+</ul>
+<li>
+Tools:
+
+<ul>
+<li>
+Helix v Ense
+
+</ul>
+</ul>
+</ul>
+</ul>
+
+<div id="CPSC 4200-Syllabus-MidTerm Study Guide"><h3 id="MidTerm Study Guide">MidTerm Study Guide</h3></div>
+<ul>
+<li>
+Confidentiality:
+
+<ul>
+<li>
+Encryption:
+
+<ul>
+<li>
+Asymetric (Public Key):
+
+<ul>
+<li>
+Two keys are generated and one is publically avaiable and the other is private to the user
+
+</ul>
+<li>
+Symetric:
+
+<ul>
+<li>
+Only one key is made must be private to all parties
+
+</ul>
+</ul>
+<li>
+Access Control/ Authorization:
+
+<ul>
+<li>
+ACL:
+
+<ul>
+<li>
+Permissions on a per user basis 
+
+</ul>
+<li>
+C-List:
+
+<ul>
+<li>
+Premissions on a per file basis
+
+</ul>
+</ul>
+<li>
+Authentication:
+
+<ul>
+<li>
+Something they are
+
+<li>
+Something they have
+
+<li>
+Something they know
+
+</ul>
+</ul>
+<li>
+Integrity:
+
+<ul>
+<li>
+Checksums
+
+<li>
+Backups
+
+<li>
+Error detection
+
+</ul>
+<li>
+Availability:
+
+<ul>
+<li>
+Redundancies
+
+<li>
+Physical protections
+
+</ul>
+<li>
+A.A.A
+
+<ul>
+<li>
+Assurance:
+
+<ul>
+<li>
+How trust is provided:
+
+<ul>
+<li>
+Policies
+
+<li>
+Permissions
+
+<li>
+Protections
+
+</ul>
+</ul>
+<li>
+Authenticity:
+
+<ul>
+<li>
+Ability to determine genuine statements
+
+<li>
+Digital signatures
+
+</ul>
+<li>
+Anonymity:
+
+<ul>
+<li>
+Aggregation
+
+<li>
+Mixing
+
+<li>
+Proxies
+
+<li>
+Pseudonyms
+
+</ul>
+</ul>
+<li>
+Biometrics:
+
+<ul>
+<li>
+Universiality
+
+<li>
+Distinguishing
+
+<li>
+Permanent
+
+<li>
+Collectable
+
+</ul>
+<li>
+Forensics:
+
+<ul>
+<li>
+Identification:
+
+<ul>
+<li>
+Identifing specific objects for analysis
+
+</ul>
+<li>
+Collection:
+
+<ul>
+<li>
+Imagging media rather than working with the original to perserve integrity
+
+<li>
+Establish a chain of custody
+
+<li>
+Documenting everything
+
+<li>
+Using only tools and methods that have been validated and thourly tested
+
+</ul>
+<li>
+Analysis/Eval:
+
+<ul>
+<li>
+Know where things can be found
+
+<ul>
+<li>
+Undeleted files
+
+<li>
+Deleted files
+
+<li>
+Windows registry
+
+<li>
+Print spool
+
+<li>
+Hibernation files
+
+<li>
+Temp files
+
+<li>
+Slack space in data chunks
+
+<li>
+Swap files
+
+<li>
+Histories
+
+<li>
+Hidden partitions
+
+<li>
+Removable media
+
+</ul>
+<li>
+Understand techniques used to hide or destroy digitial data
+
+</ul>
+<li>
+Reporting:
+
+<ul>
+<li>
+Formal process for writing up the incident
+
+<li>
+Very understandable
+
+<li>
+Unambigious
+
+</ul>
+</ul>
+</ul>
+
+</body>
+</html>
