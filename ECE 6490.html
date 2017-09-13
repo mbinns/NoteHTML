@@ -4,7 +4,6 @@
 <link rel="Stylesheet" type="text/css" href="style.css">
 <title>ECE 6490</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
 <body>
 
@@ -103,6 +102,87 @@ Everyone buys the bad cheap products because you can't tell a quality difference
 
 <li>
 So therefore companies only produce MVP which are typically bad
+
+</ul>
+
+<div id="Cryptography"><h1 id="Cryptography">Cryptography</h1></div>
+<div id="Cryptography-Basics"><h2 id="Basics">Basics</h2></div>
+<ul>
+<li>
+Clear text goes into encryption function
+
+<li>
+Results of encryption is cipher text
+
+<li>
+Decryption function can get the resulting clear text from the cipher text
+
+<li>
+If both the encryption and decryption function have the key this is called symmetric key
+
+<li>
+If the keys are different for both decryption and encryption then its called asymmetric key
+
+</ul>
+
+<div id="Cryptography-Types"><h2 id="Types">Types</h2></div>
+<div id="Cryptography-Types-Cesar Cipher"><h3 id="Cesar Cipher">Cesar Cipher</h3></div>
+<ul>
+<li>
+Rotating letters in the alphabet by 'x' offset (the key)
+
+</ul>
+
+<div id="Cryptography-Types-Vigenere Cipher"><h3 id="Vigenere Cipher">Vigenere Cipher</h3></div>
+<ul>
+<li>
+A sequence of Cesar Ciphers strung together
+
+</ul>
+
+<div id="Cryptography-Types-DES"><h3 id="DES">DES</h3></div>
+<ul>
+<li>
+DES not used any more
+
+</ul>
+
+<div id="Cryptography-Attacking"><h2 id="Attacking">Attacking</h2></div>
+<div id="Cryptography-Attacking-Cipher Text"><h3 id="Cipher Text">Cipher Text</h3></div>
+<ul>
+<li>
+Attacking cipher text you look for pattern repetition
+
+<li>
+For example in a Cesar Cipher you look for the letter repeated the most and use that as your key
+
+</ul>
+
+<div id="Cryptography-Attacking-Vigenere Cipher"><h3 id="Vigenere Cipher">Vigenere Cipher</h3></div>
+<ul>
+<li>
+A sequence of Cesar Ciphers strung together and to attack you looked for correlation of repeating letters based on index shifts
+
+<li>
+Example)
+
+<ul>
+<li>
+Shift the string by one index and look for the correlations of repeating letters
+
+<li>
+Repeat
+
+<li>
+Look for peaks in the repeating letters and use that as the offset
+
+</ul>
+</ul>
+
+<div id="Cryptography-Attacking-Side Channel Attacks"><h3 id="Side Channel Attacks">Side Channel Attacks</h3></div>
+<ul>
+<li>
+Recording the amount of energy used by the processor
 
 </ul>
 
